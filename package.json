@@ -1,0 +1,32 @@
+{
+  "name": "xsmtpapi",
+  "version": "0.0.1",
+  "description": "Builds SendGrid X-SMTPAPI headers.",
+  "main": "lib/main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/scottmotte/xsmtpapi-nodejs.git"
+  },
+  "keywords": [
+    "smtpapi",
+    "x-smtpapi",
+    "smtp",
+    "sendgrid",
+    "headers",
+    "email"
+  ],
+  "readmeFilename": "README.md",
+  "author": "scottmotte",
+  "license": "BSD",
+  "devDependencies": {
+    "mocha": "",
+    "should": ""
+  }
+}
+
