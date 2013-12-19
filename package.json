@@ -24,6 +24,9 @@
   "readmeFilename": "README.md",
   "author": "scottmotte",
   "license": "BSD",
+  "dependencies": {
+    "lodash": "2.4.1"
+  },
   "devDependencies": {
     "mocha": "",
     "should": ""
