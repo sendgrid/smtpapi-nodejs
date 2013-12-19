@@ -1,10 +1,10 @@
-# xsmtpapi-nodejs
+# smtpapi-nodejs
 
 Generate SendGrid X-SMTPAPI headers.
 
 ```javascript
-var xsmtpapi  = require('xsmtpapi');
-var header    = xsmtpapi.Header(); 
+var smtpapi  = require('smtpapi');
+var header    = smtpapi.Header(); 
 header.addTo('you@youremail.com');
 header.setUniqueArgs({cow: 'chicken'});
 ```
@@ -22,12 +22,12 @@ Add the following to your `package.json` file:
   ...
   "dependencies": {
     ...
-    "xsmtpapi": "0.0.1"
+    "smtpapi": "0.0.1"
   }
 }
 ```
 
-Install xsmtpapi-nodejs and its dependencies:
+Install smtpapi-nodejs and its dependencies:
 
 ```bash
 npm install
@@ -38,8 +38,8 @@ npm install
 ### Initializing
 
 ```javascript
-var xsmtpapi  = require('xsmtpapi');
-var header    = xsmtpapi.Header();
+var smtpapi  = require('smtpapi');
+var header    = smtpapi.Header();
 ```
 
 ### addSubVal
@@ -53,14 +53,14 @@ header.addSubVal('other', ['one', 'two']);   // sub = {keep: ['secret'], other: 
 ### setSection 
 
 ```javascript
-var header     = new xsmtpapi.Header();
+var header     = new smtpapi.Header();
 header.setSection({'-charge-': 'This ship is useless.'}); // section = {'-charge-': 'This ship is useless.'}
 ```
 
 ### addSection
 
 ```javascript
-var header     = new xsmtpapi.Header();
+var header     = new smtpapi.Header();
 header.setSection({'-charge-': 'This ship is useless.'}); // section = {'-charge-': 'This ship is useless.'}
 header.addSection({'-bomber-': 'Only for sad vikings.'}); // section = {'-charge-': 'This ship is useless.',
 ```
@@ -68,7 +68,7 @@ header.addSection({'-bomber-': 'Only for sad vikings.'}); // section = {'-charge
 ### setUniqueArgs
 
 ```javascript
-var header     = new xsmtpapi.Header();
+var header     = new smtpapi.Header();
 header.setUniqueArgs({cow: 'chicken'}); // unique_args = {cow: 'chicken'}
 header.setUniqueArgs({dad: 'proud'});   // unique_args = {dad: 'proud'}
 ```
@@ -76,7 +76,7 @@ header.setUniqueArgs({dad: 'proud'});   // unique_args = {dad: 'proud'}
 ### addUniqueArgs
 
 ```javascript
-var header     = new xsmtpapi.Header();
+var header     = new smtpapi.Header();
 header.setUniqueArgs({cow: 'chicken'}); // unique_args = {cow: 'chicken'}
 header.addUniqueArgs({cat: 'dog'});     // unique_args = {cow: 'chicken', cat: 'dog'}
 ```
@@ -86,7 +86,7 @@ header.addUniqueArgs({cat: 'dog'});     // unique_args = {cow: 'chicken', cat: '
 You can set a filter using an object literal.
 
 ```javascript
-var header     = new xsmtpapi.Header();
+var header     = new smtpapi.Header();
 header.setFilterSetting({
   'footer': {
     'setting': {
@@ -100,7 +100,7 @@ header.setFilterSetting({
 ### setCategory
 
 ```javascript
-var header     = new xsmtpapi.Header();
+var header     = new smtpapi.Header();
 header.setCategory('tactics');        // category = ['tactics']
 header.setCategory('snowball-fight'); // category = ['snowball-fight']
 ```
@@ -108,7 +108,7 @@ header.setCategory('snowball-fight'); // category = ['snowball-fight']
 ### addCategory
 
 ```javascript
-var header     = new xsmtpapi.Header();
+var header     = new smtpapi.Header();
 header.setCategory('tactics');        // category = ['tactics']
 header.addCategory('advanced');       // category = ['tactics', 'advanced']
 ```
@@ -118,7 +118,7 @@ header.addCategory('advanced');       // category = ['tactics', 'advanced']
 Alternatively, you can add filter settings one at a time.
 
 ```javascript
-var header     = new xsmtpapi.Header();
+var header     = new smtpapi.Header();
 header.addFilterSetting('footer', 'enable', 1);
 header.addFilterSetting('footer', 'text/html', '<strong>boo</strong>');
 ```
