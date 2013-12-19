@@ -45,40 +45,40 @@ var header    = xsmtpapi.Header();
 ### addSubVal
 
 ```javascript
-var email     = new Email();
-email.addSubVal('keep', 'secret'); // sub = {keep: ['secret']}
-email.addSubVal('other', ['one', 'two']);   // sub = {keep: ['secret'], other: ['one', 'two']}
+var header     = new Email();
+header.addSubVal('keep', 'secret'); // sub = {keep: ['secret']}
+header.addSubVal('other', ['one', 'two']);   // sub = {keep: ['secret'], other: ['one', 'two']}
 ```
 
 ### setSection 
 
 ```javascript
-var email     = new Email();
-email.setSection({'-charge-': 'This ship is useless.'}); // section = {'-charge-': 'This ship is useless.'}
+var header     = new xsmtpapi.Header();
+header.setSection({'-charge-': 'This ship is useless.'}); // section = {'-charge-': 'This ship is useless.'}
 ```
 
 ### addSection
 
 ```javascript
-var email     = new Email();
-email.setSection({'-charge-': 'This ship is useless.'}); // section = {'-charge-': 'This ship is useless.'}
-email.addSection({'-bomber-': 'Only for sad vikings.'}); // section = {'-charge-': 'This ship is useless.',
+var header     = new xsmtpapi.Header();
+header.setSection({'-charge-': 'This ship is useless.'}); // section = {'-charge-': 'This ship is useless.'}
+header.addSection({'-bomber-': 'Only for sad vikings.'}); // section = {'-charge-': 'This ship is useless.',
 ```
 
 ### setUniqueArgs
 
 ```javascript
-var email     = new Email();
-email.setUniqueArgs({cow: 'chicken'}); // unique_args = {cow: 'chicken'}
-email.setUniqueArgs({dad: 'proud'});   // unique_args = {dad: 'proud'}
+var header     = new xsmtpapi.Header();
+header.setUniqueArgs({cow: 'chicken'}); // unique_args = {cow: 'chicken'}
+header.setUniqueArgs({dad: 'proud'});   // unique_args = {dad: 'proud'}
 ```
 
 ### addUniqueArgs
 
 ```javascript
-var email     = new Email();
-email.setUniqueArgs({cow: 'chicken'}); // unique_args = {cow: 'chicken'}
-email.addUniqueArgs({cat: 'dog'});     // unique_args = {cow: 'chicken', cat: 'dog'}
+var header     = new xsmtpapi.Header();
+header.setUniqueArgs({cow: 'chicken'}); // unique_args = {cow: 'chicken'}
+header.addUniqueArgs({cat: 'dog'});     // unique_args = {cow: 'chicken', cat: 'dog'}
 ```
 
 ### setFilterSetting
@@ -86,8 +86,8 @@ email.addUniqueArgs({cat: 'dog'});     // unique_args = {cow: 'chicken', cat: 'd
 You can set a filter using an object literal.
 
 ```javascript
-var email     = new Email();
-email.setFilterSetting({
+var header     = new xsmtpapi.Header();
+header.setFilterSetting({
   'footer': {
     'setting': {
       'enable': 1,
@@ -100,17 +100,17 @@ email.setFilterSetting({
 ### setCategory
 
 ```javascript
-var email     = new Email();
-email.setCategory('tactics');        // category = ['tactics']
-email.setCategory('snowball-fight'); // category = ['snowball-fight']
+var header     = new xsmtpapi.Header();
+header.setCategory('tactics');        // category = ['tactics']
+header.setCategory('snowball-fight'); // category = ['snowball-fight']
 ```
 
 ### addCategory
 
 ```javascript
-var email     = new Email();
-email.setCategory('tactics');        // category = ['tactics']
-email.addCategory('advanced');       // category = ['tactics', 'advanced']
+var header     = new xsmtpapi.Header();
+header.setCategory('tactics');        // category = ['tactics']
+header.addCategory('advanced');       // category = ['tactics', 'advanced']
 ```
 
 ### addFilterSetting
@@ -118,9 +118,9 @@ email.addCategory('advanced');       // category = ['tactics', 'advanced']
 Alternatively, you can add filter settings one at a time.
 
 ```javascript
-var email     = new Email();
-email.addFilterSetting('footer', 'enable', 1);
-email.addFilterSetting('footer', 'text/html', '<strong>boo</strong>');
+var header     = new xsmtpapi.Header();
+header.addFilterSetting('footer', 'enable', 1);
+header.addFilterSetting('footer', 'text/html', '<strong>boo</strong>');
 ```
 
 
