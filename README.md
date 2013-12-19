@@ -1,6 +1,9 @@
 # smtpapi-nodejs
 
-Generate SendGrid X-SMTPAPI headers.
+This node module allows you to quickly and more easily generate SendGrid X-SMTPAPI headers.
+
+[![BuildStatus](https://travis-ci.org/sendgrid/smtpapi-nodejs.png?branch=master)](https://travis-ci.org/sendgrid/smtpapi-nodejs)
+[![NPM version](https://badge.fury.io/js/smtpapi.png)](http://badge.fury.io/js/smtpapi)
 
 ```javascript
 var smtpapi   = require('smtpapi');
