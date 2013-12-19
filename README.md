@@ -3,7 +3,7 @@
 Generate SendGrid X-SMTPAPI headers.
 
 ```javascript
-var smtpapi  = require('smtpapi');
+var smtpapi   = require('smtpapi');
 var header    = smtpapi.Header(); 
 header.addTo('you@youremail.com');
 header.setUniqueArgs({cow: 'chicken'});
@@ -38,14 +38,14 @@ npm install
 ### Initializing
 
 ```javascript
-var smtpapi  = require('smtpapi');
+var smtpapi   = require('smtpapi');
 var header    = smtpapi.Header();
 ```
 
 ### addSubVal
 
 ```javascript
-var header     = new Email();
+var header     = new smtpapi.Header();
 header.addSubVal('keep', 'secret'); // sub = {keep: ['secret']}
 header.addSubVal('other', ['one', 'two']);   // sub = {keep: ['secret'], other: ['one', 'two']}
 ```
