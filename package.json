@@ -1,5 +1,5 @@
 {
-  "name": "xsmtpapi",
+  "name": "smtpapi",
   "version": "0.0.1",
   "description": "Build SendGrid X-SMTPAPI headers in nodejs.",
   "main": "lib/main.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/scottmotte/xsmtpapi-nodejs.git"
+    "url": "git://github.com/scottmotte/smtpapi-nodejs.git"
   },
   "keywords": [
     "smtpapi",
