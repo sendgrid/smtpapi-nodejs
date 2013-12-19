@@ -10,6 +10,8 @@ var smtpapi   = require('smtpapi');
 var header    = smtpapi.Header(); 
 header.addTo('you@youremail.com');
 header.setUniqueArgs({cow: 'chicken'});
+
+var smtpapi_header_string = header.toJsonString();
 ```
 
 See [this](http://sendgrid.com/docs/API_Reference/SMTP_API/) for more information on the available X-SMTPAPI custom handling instructions.
@@ -43,6 +45,16 @@ npm install
 ```javascript
 var smtpapi   = require('smtpapi');
 var header    = smtpapi.Header();
+```
+
+### toJsonString
+
+This gives you back the stringified json formatted X-SMTPAPI header. Use this with your [smtp client](https://github.com/andris9/simplesmtp) of choice.
+
+```javascript
+var smtpapi   = require('smtpapi');
+var header    = smtpapi.Header();
+header.toJsonString();
 ```
 
 ### addSubVal
