@@ -138,4 +138,52 @@ header.addFilterSetting('footer', 'enable', 1);
 header.addFilterSetting('footer', 'text/html', '<strong>boo</strong>');
 ```
 
+## SendGrid SMTP Example
+
+The following example builds the X-SMTPAPI headers and adds them to nodemailer. Nodemailer then sends the email through SendGrid. You can use this same code in your application or optionally you can use [sendgrid-nodejs](http://github.com/sendgrid/sendgrid-nodejs).
+
+```javascript 
+var nodemailer = require('nodemailer');
+var smtpapi    = require('smtpapi');
+
+// Build the smtpapi header
+var header = new smtpapi.Header();
+header.addTo('you@youremail.com');
+header.setUniqueArgs({cow: 'chicken'});
+
+// Add the smtpapi header to the general headers
+var headers    = { 'x-smtpapi': header.toJsonString() };
+
+// Use nodemailer to send the email
+var settings  = {
+  host: "smtp.sendgrid.net",
+  port: parseInt(587, 10),
+  requiresAuth: true,
+  auth: {
+    user: "sendgrid_username",
+    pass: "sendgrid_password"
+  }
+};
+var smtpTransport = nodemailer.createTransport("SMTP", settings);
+
+var mailOptions = {
+  from:     "Fred Foo <foo@blurdybloop.com>",
+  to:       "bar@blurdybloop.com",
+  subject:  "Hello",
+  text:     "Hello world",
+  html:     "<b>Hello world</b>",
+  headers:  headers
+}
+
+smtpTransport.sendMail(mailOptions, function(error, response) {
+  smtpTransport.close();
+
+  if (error) { 
+    console.log(error);
+  } else {
+    console.log("Message sent: " + response.message);
+  }
+});
+```
+
 
