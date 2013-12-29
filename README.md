@@ -120,6 +120,16 @@ header.setFilterSetting({
 });
 ```
 
+### addFilterSetting
+
+Alternatively, you can add filter settings one at a time.
+
+```javascript
+var header     = new smtpapi.Header();
+header.addFilterSetting('footer', 'enable', 1);
+header.addFilterSetting('footer', 'text/html', '<strong>boo</strong>');
+```
+
 ### setCategory
 
 ```javascript
@@ -134,16 +144,6 @@ header.setCategory('snowball-fight'); // category = ['snowball-fight']
 var header     = new smtpapi.Header();
 header.setCategory('tactics');        // category = ['tactics']
 header.addCategory('advanced');       // category = ['tactics', 'advanced']
-```
-
-### addFilterSetting
-
-Alternatively, you can add filter settings one at a time.
-
-```javascript
-var header     = new smtpapi.Header();
-header.addFilterSetting('footer', 'enable', 1);
-header.addFilterSetting('footer', 'text/html', '<strong>boo</strong>');
 ```
 
 ## SendGrid SMTP Example
