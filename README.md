@@ -44,7 +44,7 @@ npm install
 
 ```javascript
 var smtpapi   = require('smtpapi');
-var header    = smtpapi.Header();
+var header    = new smtpapi.Header();
 ```
 
 ### toJsonString
@@ -53,8 +53,16 @@ This gives you back the stringified json formatted X-SMTPAPI header. Use this wi
 
 ```javascript
 var smtpapi   = require('smtpapi');
-var header    = smtpapi.Header();
+var header    = new smtpapi.Header();
 header.toJsonString();
+```
+
+### addTo
+
+```javascript
+var header     = new smtpapi.Header();
+header.addTo('you@youremail.com');
+header.addTo('other@otheremail.com');
 ```
 
 ### addSubVal
