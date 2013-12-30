@@ -27,10 +27,10 @@ describe('smtapi', function() {
       header.toJsonString().should.eql('{"to":["addTo@mailinator.com"]}');
     });
 
-    it('addSubVal', function() {
+    it('addSubstitution', function() {
       var header = new smtpapi.Header();
 
-      header.addSubVal('sub', 'val');
+      header.addSubstitution('sub', 'val');
       header.toJsonString().should.eql('{"sub":{"sub":["val"]}}');
     });
 
@@ -41,18 +41,18 @@ describe('smtapi', function() {
       header.toJsonString().should.eql('{"unique_args":{"set_unique_argument_key":"set_unique_argument_value"}}');
     });
 
-    it('addUniqueArgs', function() {
+    it('addUniqueArg', function() {
       var header = new smtpapi.Header();
 
-      header.addUniqueArgs({add_unique_argument_key: 'add_unique_argument_value'});
-      header.addUniqueArgs({add_unique_argument_key_2: 'add_unique_argument_value_2'});
+      header.addUniqueArg({add_unique_argument_key: 'add_unique_argument_value'});
+      header.addUniqueArg({add_unique_argument_key_2: 'add_unique_argument_value_2'});
       header.toJsonString().should.eql('{"unique_args":{"add_unique_argument_key":"add_unique_argument_value","add_unique_argument_key_2":"add_unique_argument_value_2"}}');
     });
 
-    it('setCategory', function() {
+    it('setCategories', function() {
       var header = new smtpapi.Header();
 
-      header.setCategory('setCategory');
+      header.setCategories(['setCategory']);
       header.toJsonString().should.eql('{"category":["setCategory"]}');
     });
 
@@ -64,10 +64,10 @@ describe('smtapi', function() {
       header.toJsonString().should.eql('{"category":["addCategory","addCategory2"]}');
     });
 
-    it('setSection', function() {
+    it('setSections', function() {
       var header = new smtpapi.Header();
 
-      header.setSection({'set_section_key': 'set_section_value'});
+      header.setSections({'set_section_key': 'set_section_value'});
       header.toJsonString().should.eql('{"section":{"set_section_key":"set_section_value"}}');
     });
 
@@ -79,7 +79,7 @@ describe('smtapi', function() {
       header.toJsonString().should.eql('{"section":{"set_section_key":"set_section_value","set_section_key_2":"set_section_value_2"}}');
     });
 
-    it('setFilterSetting', function() {
+    it('setFilters', function() {
       var header = new smtpapi.Header();
 
       var filter = {
@@ -91,14 +91,14 @@ describe('smtapi', function() {
         }
       }
 
-      header.setFilterSetting(filter);
+      header.setFilters(filter);
       header.toJsonString().should.eql('{"filters":{"footer":{"setting":{"enable":1,"text/plain":"You can haz footers!"}}}}');
     });
 
-    it('addFilterSetting', function() {
+    it('addFilter', function() {
       var header = new smtpapi.Header();
 
-      header.addFilterSetting('footer', 'text/html', '<strong>boo</strong>');
+      header.addFilter('footer', 'text/html', '<strong>boo</strong>');
       header.toJsonString().should.eql('{"filters":{"footer":{"settings":{"text/html":"<strong>boo</strong>"}}}}');
     });
 

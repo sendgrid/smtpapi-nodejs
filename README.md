@@ -65,27 +65,34 @@ header.addTo('you@youremail.com');
 header.addTo('other@otheremail.com');
 ```
 
-### addSubVal
+### setTos
 
 ```javascript
 var header     = new smtpapi.Header();
-header.addSubVal('keep', 'secret'); // sub = {keep: ['secret']}
-header.addSubVal('other', ['one', 'two']);   // sub = {keep: ['secret'], other: ['one', 'two']}
+header.setTos(['you@youremail.com', 'other@otheremail.com');
 ```
 
-### setSection 
+### addSubstitution
 
 ```javascript
 var header     = new smtpapi.Header();
-header.setSection({'-charge-': 'This ship is useless.'}); // section = {'-charge-': 'This ship is useless.'}
+header.addSubstitution('keep', 'secret'); // sub = {keep: ['secret']}
+header.addSubstitution('other', ['one', 'two']);   // sub = {keep: ['secret'], other: ['one', 'two']}
 ```
 
-### addSection
+### setSubstitutions 
 
 ```javascript
 var header     = new smtpapi.Header();
-header.setSection({'-charge-': 'This ship is useless.'}); // section = {'-charge-': 'This ship is useless.'}
-header.addSection({'-bomber-': 'Only for sad vikings.'}); // section = {'-charge-': 'This ship is useless.',
+header.setSubstitution({'-charge-': 'This ship is useless.'}); // section = {'-charge-': 'This ship is useless.'}
+```
+
+### addUniqueArg
+
+```javascript
+var header     = new smtpapi.Header();
+header.addUniqueArg({cow: 'chicken'}); // unique_args = {cow: 'chicken'}
+header.addUniqueArg({cat: 'dog'});     // unique_args = {cow: 'chicken', cat: 'dog'}
 ```
 
 ### setUniqueArgs
@@ -96,21 +103,52 @@ header.setUniqueArgs({cow: 'chicken'}); // unique_args = {cow: 'chicken'}
 header.setUniqueArgs({dad: 'proud'});   // unique_args = {dad: 'proud'}
 ```
 
-### addUniqueArgs
+### addCategory
 
 ```javascript
 var header     = new smtpapi.Header();
-header.setUniqueArgs({cow: 'chicken'}); // unique_args = {cow: 'chicken'}
-header.addUniqueArgs({cat: 'dog'});     // unique_args = {cow: 'chicken', cat: 'dog'}
+header.addCategory('tactics');        // category = ['tactics']
+header.addCategory('advanced');       // category = ['tactics', 'advanced']
 ```
 
-### setFilterSetting
+### setCategories
+
+```javascript
+var header     = new smtpapi.Header();
+header.setCategories(['snowball-fight', 'tactics']); // category = ['snowball-fight', 'tactics']
+```
+
+### addSection
+
+```javascript
+var header     = new smtpapi.Header();
+header.addSection({'-charge-': 'This ship is useless.'}); // section = {'-charge-': 'This ship is useless.'}
+```
+
+### setSections
+
+```javascript
+var header     = new smtpapi.Header();
+header.setSections({'-charge-': 'This ship is useless.', '-other': 'Another section here'}); // section = {'-charge-': 'This ship is useless.', '-other': 'Another section here'}
+```
+
+### addFilter
+
+You can add filter settings one at a time.
+
+```javascript
+var header     = new smtpapi.Header();
+header.addFilter('footer', 'enable', 1);
+header.addFilter('footer', 'text/html', '<strong>boo</strong>');
+```
+
+### setFilters
 
 You can set a filter using an object literal.
 
 ```javascript
 var header     = new smtpapi.Header();
-header.setFilterSetting({
+header.setFilters({
   'footer': {
     'setting': {
       'enable': 1,
@@ -118,32 +156,6 @@ header.setFilterSetting({
     }
   }
 });
-```
-
-### addFilterSetting
-
-Alternatively, you can add filter settings one at a time.
-
-```javascript
-var header     = new smtpapi.Header();
-header.addFilterSetting('footer', 'enable', 1);
-header.addFilterSetting('footer', 'text/html', '<strong>boo</strong>');
-```
-
-### setCategory
-
-```javascript
-var header     = new smtpapi.Header();
-header.setCategory('tactics');        // category = ['tactics']
-header.setCategory('snowball-fight'); // category = ['snowball-fight']
-```
-
-### addCategory
-
-```javascript
-var header     = new smtpapi.Header();
-header.setCategory('tactics');        // category = ['tactics']
-header.addCategory('advanced');       // category = ['tactics', 'advanced']
 ```
 
 ## SendGrid SMTP Example
