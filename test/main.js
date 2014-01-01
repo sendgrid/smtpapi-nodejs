@@ -1,6 +1,7 @@
-var assert      = require('assert'),
-    should      = require('should'),
-    smtpapi     = require('../lib/main');
+var assert      = require('assert');
+var should      = require('should');
+var smtpapi     = require('../lib/main');
+var t           = require('./smtpapi_test_strings.json');
 
 var result;
 
@@ -17,28 +18,35 @@ describe('smtapi', function() {
     it('has a jsonString method', function() {
       var header = new smtpapi.Header();
 
-      header.jsonString().should.eql('{}');
+      header.jsonString().should.eql(t.json_string);
     });
 
     it('addTo', function() {
       var header = new smtpapi.Header();
 
       header.addTo('addTo@mailinator.com');
-      header.jsonString().should.eql('{"to":["addTo@mailinator.com"]}');
+      header.jsonString().should.eql(t.add_to);
+    });
+
+    it('setTos', function() {
+      var header = new smtpapi.Header();
+
+      header.setTos(['setTos@mailinator.com']);
+      header.jsonString().should.eql(t.set_tos);
     });
 
     it('addSubstitution', function() {
       var header = new smtpapi.Header();
 
       header.addSubstitution('sub', 'val');
-      header.jsonString().should.eql('{"sub":{"sub":["val"]}}');
+      header.jsonString().should.eql(t.add_substitution);
     });
 
-    it('setUniqueArgs', function() {
+    it('setSubstitutions', function() {
       var header = new smtpapi.Header();
 
-      header.setUniqueArgs({set_unique_argument_key: 'set_unique_argument_value'});
-      header.jsonString().should.eql('{"unique_args":{"set_unique_argument_key":"set_unique_argument_value"}}');
+      header.setSubstitutions({'sub': ['val']});
+      header.jsonString().should.eql(t.set_substitutions);
     });
 
     it('addUniqueArg', function() {
@@ -46,14 +54,14 @@ describe('smtapi', function() {
 
       header.addUniqueArg({add_unique_argument_key: 'add_unique_argument_value'});
       header.addUniqueArg({add_unique_argument_key_2: 'add_unique_argument_value_2'});
-      header.jsonString().should.eql('{"unique_args":{"add_unique_argument_key":"add_unique_argument_value","add_unique_argument_key_2":"add_unique_argument_value_2"}}');
+      header.jsonString().should.eql(t.add_unique_arg);
     });
 
-    it('setCategories', function() {
+    it('setUniqueArgs', function() {
       var header = new smtpapi.Header();
 
-      header.setCategories(['setCategory']);
-      header.jsonString().should.eql('{"category":["setCategory"]}');
+      header.setUniqueArgs({set_unique_argument_key: 'set_unique_argument_value'});
+      header.jsonString().should.eql(t.set_unique_args);
     });
 
     it('addCategory', function() {
@@ -61,14 +69,14 @@ describe('smtapi', function() {
 
       header.addCategory('addCategory');
       header.addCategory('addCategory2');
-      header.jsonString().should.eql('{"category":["addCategory","addCategory2"]}');
+      header.jsonString().should.eql(t.add_category);
     });
 
-    it('setSections', function() {
+    it('setCategories', function() {
       var header = new smtpapi.Header();
 
-      header.setSections({'set_section_key': 'set_section_value'});
-      header.jsonString().should.eql('{"section":{"set_section_key":"set_section_value"}}');
+      header.setCategories(['setCategories']);
+      header.jsonString().should.eql(t.set_categories);
     });
 
     it('addSection', function() {
@@ -76,7 +84,21 @@ describe('smtapi', function() {
 
       header.addSection({'set_section_key': 'set_section_value'});
       header.addSection({'set_section_key_2': 'set_section_value_2'});
-      header.jsonString().should.eql('{"section":{"set_section_key":"set_section_value","set_section_key_2":"set_section_value_2"}}');
+      header.jsonString().should.eql(t.add_section);
+    });
+
+    it('setSections', function() {
+      var header = new smtpapi.Header();
+
+      header.setSections({'set_section_key': 'set_section_value'});
+      header.jsonString().should.eql(t.set_sections);
+    });
+
+    it('addFilter', function() {
+      var header = new smtpapi.Header();
+
+      header.addFilter('footer', 'text/html', '<strong>boo</strong>');
+      header.jsonString().should.eql(t.add_filter);
     });
 
     it('setFilters', function() {
@@ -92,15 +114,7 @@ describe('smtapi', function() {
       }
 
       header.setFilters(filter);
-      header.jsonString().should.eql('{"filters":{"footer":{"setting":{"enable":1,"text/plain":"You can haz footers!"}}}}');
+      header.jsonString().should.eql(t.set_filters);
     });
-
-    it('addFilter', function() {
-      var header = new smtpapi.Header();
-
-      header.addFilter('footer', 'text/html', '<strong>boo</strong>');
-      header.jsonString().should.eql('{"filters":{"footer":{"settings":{"text/html":"<strong>boo</strong>"}}}}');
-    });
-
   });
 });
