@@ -25,11 +25,16 @@
   "author": "scottmotte",
   "license": "BSD",
   "dependencies": {
-    "lodash": "2.4.1"
   },
   "devDependencies": {
     "mocha": "",
     "should": ""
-  }
+    },
+  "contributors": [
+    {
+      "name": "Yamil Asusta",
+      "email": "yamil@sendgrid.com",
+      "url": "yamilasusta.com"
+    }
+  ]
 }
-
