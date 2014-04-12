@@ -27,7 +27,7 @@ Add the following to your `package.json` file:
   ...
   "dependencies": {
     ...
-    "smtpapi": "0.0.1"
+    "smtpapi": "0.0.2"
   }
 }
 ```
