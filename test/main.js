@@ -72,6 +72,14 @@ describe('smtapi', function() {
       header.jsonString().should.eql(t.add_category);
     });
 
+    it('addCategoryUnicode', function() {
+      var header = new smtpapi.Header();
+
+      header.addCategory('カテゴリUnicode');
+      header.addCategory('カテゴリ2Unicode');
+      header.jsonString().should.eql(t.add_category_unicode);
+    });
+
     it('setCategories', function() {
       var header = new smtpapi.Header();
 
