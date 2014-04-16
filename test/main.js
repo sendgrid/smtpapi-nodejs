@@ -11,7 +11,7 @@ describe('smtapi', function() {
   });
 
   it('version should be set', function() {
-    result.version.should.eql("0.0.1"); 
+    result.version.should.eql("0.0.2"); 
   });
 
   describe('.Header', function() {
