@@ -76,60 +76,59 @@ header.setTos(['you@youremail.com', 'other@otheremail.com');
 
 ```javascript
 var header     = new smtpapi();
-header.addSubstitution('keep', 'secret'); // sub = {keep: ['secret']}
-header.addSubstitution('other', ['one', 'two']);   // sub = {keep: ['secret'], other: ['one', 'two']}
+header.addSubstitution('keep', ['secret']);
+header.addSubstitution('other', ['one', 'two']);
 ```
 
 ### setSubstitutions
 
 ```javascript
 var header     = new smtpapi();
-header.setSubstitution({'-charge-': 'This ship is useless.'}); // section = {'-charge-': 'This ship is useless.'}
+header.setSubstitution({'keep': ['secret']);
 ```
 
 ### addUniqueArg
 
 ```javascript
 var header     = new smtpapi();
-header.addUniqueArg('cow', 'chicken'); // unique_args = {cow: 'chicken'}
-header.addUniqueArg('cat', 'dog');     // unique_args = {cow: 'chicken', cat: 'dog'}
+header.addUniqueArg('cat', 'dogs');
 ```
 
 ### setUniqueArgs
 
 ```javascript
 var header     = new smtpapi();
-header.setUniqueArgs({cow: 'chicken'}); // unique_args = {cow: 'chicken'}
-header.setUniqueArgs({dad: 'proud'});   // unique_args = {dad: 'proud'}
+header.setUniqueArgs({cow: 'chicken'});
+header.setUniqueArgs({dad: 'proud'});
 ```
 
 ### addCategory
 
 ```javascript
 var header     = new smtpapi();
-header.addCategory('tactics');        // category = ['tactics']
-header.addCategory('advanced');       // category = ['tactics', 'advanced']
+header.addCategory('tactics');
+header.addCategory('advanced');
 ```
 
 ### setCategories
 
 ```javascript
 var header     = new smtpapi();
-header.setCategories(['snowball-fight', 'tactics']); // category = ['snowball-fight', 'tactics']
+header.setCategories(['tactics', 'advanced']);
 ```
 
 ### addSection
 
 ```javascript
 var header     = new smtpapi();
-header.addSection('-charge-', 'This ship is useless.'); // section = {'-charge-': 'This ship is useless.'}
+header.addSection('-charge-', 'This ship is useless.');
 ```
 
 ### setSections
 
 ```javascript
 var header     = new smtpapi();
-header.setSections({'-charge-': 'This ship is useless.', '-other': 'Another section here'}); // section = {'-charge-': 'This ship is useless.', '-other': 'Another section here'}
+header.setSections({'-charge-': 'This ship is useless.', '-other': 'Another section here'});
 ```
 
 ### addFilter
