@@ -1,6 +1,6 @@
 {
   "name": "smtpapi",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Build SendGrid X-SMTPAPI headers in nodejs.",
   "main": "lib/main.js",
   "directories": {
@@ -25,11 +25,21 @@
   "author": "scottmotte",
   "license": "BSD",
   "dependencies": {
-    "lodash": "2.4.1"
   },
   "devDependencies": {
     "mocha": "",
     "should": ""
-  }
+    },
+  "contributors": [
+    {
+      "name": "Yamil Asusta",
+      "email": "yamil@sendgrid.com",
+      "url": "yamilasusta.com"
+    },
+    {
+      "name": "Scott Motte",
+      "email": "scott@scottmotte.com",
+      "url": "scottmotte.com"
+    }
+  ]
 }
-
