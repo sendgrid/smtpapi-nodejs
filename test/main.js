@@ -31,6 +31,12 @@ describe('smtapi', function() {
     header.jsonString().should.eql(t.add_substitution);
   });
 
+  it('addSubstitution array value', function() {
+    header.setSubstitutions({'sub': ['val 1']});
+    header.addSubstitution('sub', ['val 2']);
+    header.jsonString().should.eql(t.add_substitution_array_value);
+  });
+
   it('setSubstitutions', function() {
     header.setSubstitutions({'sub': ['val']});
     header.jsonString().should.eql(t.set_substitutions);
