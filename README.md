@@ -183,7 +183,7 @@ var settings  = {
     pass: "sendgrid_password"
   }
 };
-var smtpTransport = nodemailer.createTransport("SMTP", settings);
+var smtpTransport = nodemailer.createTransport(settings);
 
 var mailOptions = {
   from:     "Fred Foo <foo@blurdybloop.com>",
