@@ -7,7 +7,7 @@ This node module allows you to quickly and more easily generate SendGrid X-SMTPA
 
 ```javascript
 var smtpapi   = require('smtpapi');
-var header    = smtpapi.Header(); 
+var header    = new smtpapi();
 header.addTo('you@youremail.com');
 header.setUniqueArgs({cow: 'chicken'});
 
@@ -27,7 +27,7 @@ Add the following to your `package.json` file:
   ...
   "dependencies": {
     ...
-    "smtpapi": "0.0.2"
+    "smtpapi": "1.0.0"
   }
 }
 ```
@@ -44,7 +44,7 @@ npm install
 
 ```javascript
 var smtpapi   = require('smtpapi');
-var header    = new smtpapi.Header();
+var header    = new smtpapi();
 ```
 
 ### jsonString
@@ -53,14 +53,14 @@ This gives you back the stringified json formatted X-SMTPAPI header. Use this wi
 
 ```javascript
 var smtpapi   = require('smtpapi');
-var header    = new smtpapi.Header();
+var header    = new smtpapi();
 header.jsonString();
 ```
 
 ### addTo
 
 ```javascript
-var header     = new smtpapi.Header();
+var header     = new smtpapi();
 header.addTo('you@youremail.com');
 header.addTo('other@otheremail.com');
 ```
@@ -68,68 +68,67 @@ header.addTo('other@otheremail.com');
 ### setTos
 
 ```javascript
-var header     = new smtpapi.Header();
+var header     = new smtpapi();
 header.setTos(['you@youremail.com', 'other@otheremail.com');
 ```
 
 ### addSubstitution
 
 ```javascript
-var header     = new smtpapi.Header();
-header.addSubstitution('keep', 'secret'); // sub = {keep: ['secret']}
-header.addSubstitution('other', ['one', 'two']);   // sub = {keep: ['secret'], other: ['one', 'two']}
+var header     = new smtpapi();
+header.addSubstitution('keep', ['secret']);
+header.addSubstitution('other', ['one', 'two']);
 ```
 
-### setSubstitutions 
+### setSubstitutions
 
 ```javascript
-var header     = new smtpapi.Header();
-header.setSubstitution({'-charge-': 'This ship is useless.'}); // section = {'-charge-': 'This ship is useless.'}
+var header     = new smtpapi();
+header.setSubstitution({'keep': ['secret']);
 ```
 
 ### addUniqueArg
 
 ```javascript
-var header     = new smtpapi.Header();
-header.addUniqueArg({cow: 'chicken'}); // unique_args = {cow: 'chicken'}
-header.addUniqueArg({cat: 'dog'});     // unique_args = {cow: 'chicken', cat: 'dog'}
+var header     = new smtpapi();
+header.addUniqueArg('cat', 'dogs');
 ```
 
 ### setUniqueArgs
 
 ```javascript
-var header     = new smtpapi.Header();
-header.setUniqueArgs({cow: 'chicken'}); // unique_args = {cow: 'chicken'}
-header.setUniqueArgs({dad: 'proud'});   // unique_args = {dad: 'proud'}
+var header     = new smtpapi();
+header.setUniqueArgs({cow: 'chicken'});
+header.setUniqueArgs({dad: 'proud'});
 ```
 
 ### addCategory
 
 ```javascript
-var header     = new smtpapi.Header();
-header.addCategory('tactics');        // category = ['tactics']
-header.addCategory('advanced');       // category = ['tactics', 'advanced']
+var header     = new smtpapi();
+header.addCategory('tactics');
+header.addCategory('advanced');
 ```
 
 ### setCategories
 
 ```javascript
-var header     = new smtpapi.Header();
-header.setCategories(['snowball-fight', 'tactics']); // category = ['snowball-fight', 'tactics']
+var header     = new smtpapi();
+header.setCategories(['tactics', 'advanced']);
 ```
 
 ### addSection
 
 ```javascript
-var header     = new smtpapi.Header();
-header.addSection({'-charge-': 'This ship is useless.'}); // section = {'-charge-': 'This ship is useless.'}
+var header     = new smtpapi();
+header.addSection('-charge-', 'This ship is useless.');
 ```
 
 ### setSections
 
 ```javascript
-var header     = new smtpapi.Header();
-header.setSections({'-charge-': 'This ship is useless.', '-other': 'Another section here'}); // section = {'-charge-': 'This ship is useless.', '-other': 'Another section here'}
+var header     = new smtpapi();
+header.setSections({'-charge-': 'This ship is useless.', '-other': 'Another section here'});
 ```
 
 ### addFilter
@@ -137,7 +136,7 @@ header.setSections({'-charge-': 'This ship is useless.', '-other': 'Another sect
 You can add filter settings one at a time.
 
 ```javascript
-var header     = new smtpapi.Header();
+var header     = new smtpapi();
 header.addFilter('footer', 'enable', 1);
 header.addFilter('footer', 'text/html', '<strong>boo</strong>');
 ```
@@ -147,7 +146,7 @@ header.addFilter('footer', 'text/html', '<strong>boo</strong>');
 You can set a filter using an object literal.
 
 ```javascript
-var header     = new smtpapi.Header();
+var header     = new smtpapi();
 header.setFilters({
   'footer': {
     'setting': {
@@ -162,12 +161,12 @@ header.setFilters({
 
 The following example builds the X-SMTPAPI headers and adds them to nodemailer. Nodemailer then sends the email through SendGrid. You can use this same code in your application or optionally you can use [sendgrid-nodejs](http://github.com/sendgrid/sendgrid-nodejs).
 
-```javascript 
+```javascript
 var nodemailer = require('nodemailer');
 var smtpapi    = require('smtpapi');
 
 // Build the smtpapi header
-var header = new smtpapi.Header();
+var header = new smtpapi();
 header.addTo('you@youremail.com');
 header.setUniqueArgs({cow: 'chicken'});
 
@@ -184,7 +183,7 @@ var settings  = {
     pass: "sendgrid_password"
   }
 };
-var smtpTransport = nodemailer.createTransport("SMTP", settings);
+var smtpTransport = nodemailer.createTransport(settings);
 
 var mailOptions = {
   from:     "Fred Foo <foo@blurdybloop.com>",
@@ -198,7 +197,7 @@ var mailOptions = {
 smtpTransport.sendMail(mailOptions, function(error, response) {
   smtpTransport.close();
 
-  if (error) { 
+  if (error) {
     console.log(error);
   } else {
     console.log("Message sent: " + response.message);
