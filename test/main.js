@@ -11,7 +11,7 @@ describe('smtapi', function() {
   });
 
   it('version should be set', function() {
-    result.version.should.eql("0.0.2"); 
+    result.version.should.eql("0.0.2");
   });
 
   describe('.Header', function() {
@@ -75,7 +75,7 @@ describe('smtapi', function() {
     it('addCategoryUnicode', function() {
       var header = new smtpapi.Header();
 
-      header.addCategory('カテゴリUnicode');
+      header.addCategory('カテゴリUnicode\t');
       header.addCategory('カテゴリ2Unicode');
       header.jsonString().should.eql(t.add_category_unicode);
     });
