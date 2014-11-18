@@ -94,7 +94,7 @@ describe('smtapi', function() {
           'text/plain': 'You can haz footers!'
         }
       }
-    }
+    };
 
     header.setFilters(filter);
     header.jsonString().should.eql(t.set_filters);
