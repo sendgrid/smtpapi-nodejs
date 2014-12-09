@@ -27,7 +27,7 @@ Add the following to your `package.json` file:
   ...
   "dependencies": {
     ...
-    "smtpapi": "1.0.0"
+    "smtpapi": "1.0.5"
   }
 }
 ```
@@ -155,6 +155,35 @@ header.setFilters({
     }
   }
 });
+```
+
+### setSendAt
+
+You can set the send_at scheduling param using an UNIX timestamp.
+
+```javascript
+var header     = new smtpapi();
+header.setSendAt(1409348513);
+```
+
+### setSendEachAt
+
+You can set the send_each_at scheduling param using a list of UNIX timestamps.
+
+```javascript
+var header     = new smtpapi();
+header.setSendEachAt([1409348513, 14093485134]);
+```
+
+### addSendEachAt
+
+You can append one or more send_each_at scheduling param(s) to the existing ones using an UNIX timestamp.
+
+```javascript
+var header     = new smtpapi();
+header.setSendEachAt([1409348511, 14093485132]);
+header.addSendEachAt(1409348513]);
+header.addSendEachAt(14093485134);
 ```
 
 ## SendGrid SMTP Example
