@@ -9,7 +9,7 @@ describe('smtapi', function() {
   });
 
   it('version should be set', function() {
-    header.version.should.eql("1.0.4");
+    header.version.should.eql("1.0.5");
   });
 
   it('has a jsonString method', function() {
@@ -98,5 +98,29 @@ describe('smtapi', function() {
 
     header.setFilters(filter);
     header.jsonString().should.eql(t.set_filters);
+  });
+
+  it('setSendAt', function() {
+    header.setSendAt(1409348513);
+    header.jsonString().should.eql(t.set_send_at);
+  });
+
+  it('setSendAt', function() {
+    header.setSendEachAt([1409348513, 1409348514, 1409348515]);
+    header.jsonString().should.eql(t.set_send_each_at);
+  });
+
+  it('addSendEachAt', function() {
+    header.addSendEachAt(1409348513);
+    header.addSendEachAt(1409348514);
+    header.addSendEachAt(1409348515);
+    header.jsonString().should.eql(t.add_send_each_at);
+  });
+
+  it('setSendEachAt and addSendEachAt', function() {
+    header.setSendEachAt([1409348513]);
+    header.addSendEachAt(1409348514);
+    header.addSendEachAt(1409348515);
+    header.jsonString().should.eql(t.add_send_each_at);
   });
 });
