@@ -84,7 +84,7 @@ header.addSubstitution('other', ['one', 'two']);
 
 ```javascript
 var header     = new smtpapi();
-header.setSubstitution({'keep': ['secret']);
+header.setSubstitutions({'keep': ['secret'], 'other': ['one', 'two']});
 ```
 
 ### addUniqueArg
