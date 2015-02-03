@@ -27,7 +27,7 @@ Add the following to your `package.json` file:
   ...
   "dependencies": {
     ...
-    "smtpapi": "1.0.5"
+    "smtpapi": "1.0.6"
   }
 }
 ```
@@ -184,6 +184,15 @@ var header     = new smtpapi();
 header.setSendEachAt([1409348511, 14093485132]);
 header.addSendEachAt(1409348513]);
 header.addSendEachAt(14093485134);
+```
+
+### setASMGroupID
+
+You can set the ASM Group ID.
+
+```javascript
+var header     = new smtpapi();
+header.setASMGroupID(123);
 ```
 
 ## SendGrid SMTP Example

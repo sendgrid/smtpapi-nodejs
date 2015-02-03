@@ -9,7 +9,7 @@ describe('smtapi', function() {
   });
 
   it('version should be set', function() {
-    header.version.should.eql("1.0.5");
+    header.version.should.eql("1.0.6");
   });
 
   it('has a jsonString method', function() {
@@ -122,5 +122,10 @@ describe('smtapi', function() {
     header.addSendEachAt(1409348514);
     header.addSendEachAt(1409348515);
     header.jsonString().should.eql(t.add_send_each_at);
+  });
+
+  it('setASMGroupID', function() {
+    header.setASMGroupID(123);
+    header.jsonString().should.eql(t.set_asm_group_id);
   });
 });
