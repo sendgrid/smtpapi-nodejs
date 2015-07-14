@@ -195,6 +195,12 @@ var header     = new smtpapi();
 header.setASMGroupID(123);
 ```
 
+### [IP Pools](https://sendgrid.com/docs/API_Reference/Web_API_v3/IP_Management/ip_pools.html)
+
+```javascript
+header.setIpPool("testPool");
+```
+
 ## SendGrid SMTP Example
 
 The following example builds the X-SMTPAPI headers and adds them to nodemailer. Nodemailer then sends the email through SendGrid. You can use this same code in your application or optionally you can use [sendgrid-nodejs](http://github.com/sendgrid/sendgrid-nodejs).
