@@ -262,3 +262,13 @@ smtpTransport.sendMail(mailOptions, function(error, response) {
 ````bash
 npm test
 ```
+
+## Deploying
+
+* Confirm tests pass
+* Bump the version in `README.md`, `package.json`, `test/main.js`
+* Update `CHANGELOG.md`
+* Confirm tests pass
+* Commit `Version bump vX.X.X`
+* `npm publish`
+* Release tag on GitHub `vX.X.X`
