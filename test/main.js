@@ -59,6 +59,11 @@ describe('smtapi', function() {
     header.jsonString().should.eql(t.add_category);
   });
 
+  it('addCategory', function() {
+    header.addCategory(['addCategory']);
+    header.jsonString().should.equal(t.add_category_array);
+  });
+
   it('addCategoryUnicode', function() {
     header.addCategory('カテゴリUnicode');
     header.addCategory('カテゴリ2Unicode');
