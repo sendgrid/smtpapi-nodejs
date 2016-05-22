@@ -1,22 +1,25 @@
-# smtpapi-nodejs
-
-This node module allows you to quickly and more easily generate SendGrid X-SMTPAPI headers.
-
 [![BuildStatus](https://travis-ci.org/sendgrid/smtpapi-nodejs.png?branch=master)](https://travis-ci.org/sendgrid/smtpapi-nodejs)
-[![NPM version](https://badge.fury.io/js/smtpapi.png)](http://badge.fury.io/js/smtpapi)
 
-```javascript
-var smtpapi   = require('smtpapi');
-var header    = new smtpapi();
-header.addTo('you@youremail.com');
-header.setUniqueArgs({cow: 'chicken'});
+**This node module allows you to quickly and more easily generate SendGrid X-SMTPAPI headers.**
 
-var smtpapi_header_string = header.jsonString();
+# Announcements
+
+All updates to this module is documented in our [CHANGELOG](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CHANGELOG.md).
+
+# Installation
+
+## Environment Variables
+
+First, get your free SendGrid account [here](https://sendgrid.com/free?source=smtpapi-nodejs).
+
+Next, update your environment with your SendGrid credentials. (if you will be sending via nodemailer or other SMTP transport)
+
+```bash
+echo "export SENDGRID_USERNAME='YOUR_USERNAME'" > sendgrid.env
+echo "export SENDGRID_PASSWORD='YOUR_PASSWORD'" >> sendgrid.env
+echo "sendgrid.env" >> .gitignore
+source ./sendgrid.env
 ```
-
-See [this](http://sendgrid.com/docs/API_Reference/SMTP_API/) for more information on the available X-SMTPAPI custom handling instructions.
-
-## Installation
 
 The following recommended installation requires [npm](https://npmjs.org/). If you are unfamiliar with npm, see the [npm docs](https://npmjs.org/doc/). Npm comes installed with Node.js since node version 0.8.x therefore you likely already have it.
 
@@ -38,238 +41,46 @@ Install smtpapi-nodejs and its dependencies:
 npm install
 ```
 
-## Usage
+## Dependencies
 
-### Initializing
+- The SendGrid Service, starting at the [free level](https://sendgrid.com/free?source=smtpapi-nodejs)
+- Please see [package.json](https://github.com/sendgrid/smtpapi-nodejs/blob/master/package.json)
 
-```javascript
-var smtpapi   = require('smtpapi');
-var header    = new smtpapi();
-```
-
-### jsonString
-
-This gives you back the stringified json formatted X-SMTPAPI header. Use this with your [smtp client](https://github.com/andris9/simplesmtp) of choice.
+# Quick Start
 
 ```javascript
 var smtpapi   = require('smtpapi');
 var header    = new smtpapi();
-header.jsonString();
-```
-
-### addTo
-
-```javascript
-var header     = new smtpapi();
-header.addTo('you@youremail.com');
-header.addTo('other@otheremail.com');
-```
-
-### setTos
-
-```javascript
-var header     = new smtpapi();
-header.setTos(['you@youremail.com', 'other@otheremail.com');
-```
-
-### addSubstitution
-
-```javascript
-var header     = new smtpapi();
-header.addSubstitution('keep', ['secret']);
-header.addSubstitution('other', ['one', 'two']);
-```
-
-### setSubstitutions
-
-```javascript
-var header     = new smtpapi();
-header.setSubstitutions({'keep': ['secret'], 'other': ['one', 'two']});
-```
-
-### addUniqueArg
-
-```javascript
-var header     = new smtpapi();
-header.addUniqueArg('cat', 'dogs');
-```
-
-### setUniqueArgs
-
-```javascript
-var header     = new smtpapi();
+header.addTo('test@example.com');
 header.setUniqueArgs({cow: 'chicken'});
-header.setUniqueArgs({dad: 'proud'});
+console.log(header.jsonString());
 ```
 
-### addCategory
+# Usage
 
-```javascript
-var header     = new smtpapi();
-header.addCategory('tactics');
-header.addCategory('advanced');
-```
+- [SendGrid Docs](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
+- [Example Code](https://github.com/sendgrid/smtpapi-nodejs/blob/master/examples)
 
-### setCategories
+## Roadmap
 
-```javascript
-var header     = new smtpapi();
-header.setCategories(['tactics', 'advanced']);
-```
+If you are intersted in the future direction of this project, please take a look at our [milestones](https://github.com/sendgrid/smtpapi-nodejs/milestones). We would love to hear your feedback.
 
-### addSection
+## How to Contribute
 
-```javascript
-var header     = new smtpapi();
-header.addSection('-charge-', 'This ship is useless.');
-```
+We encourage contribution to our projects, please see our [CONTRIBUTING](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md) guide for details.
 
-### setSections
+Quick links:
 
-```javascript
-var header     = new smtpapi();
-header.setSections({'-charge-': 'This ship is useless.', '-other': 'Another section here'});
-```
+- [Feature Request](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md#feature_request)
+- [Bug Reports](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md#submit_a_bug_report)
+- [Sign the CLA to Create a Pull Request](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md#cla)
+- [Improvements to the Codebase](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md#improvements_to_the_codebase)
 
-### addFilter
+# About
 
-You can add filter settings one at a time.
+smtpapi-nodejs is guided and supported by the SendGrid [Developer Experience Team](mailto:dx@sendgrid.com).
 
-```javascript
-var header     = new smtpapi();
-header.addFilter('footer', 'enable', 1);
-header.addFilter('footer', 'text/html', '<strong>boo</strong>');
-```
+smtpapi-nodejs is maintained and funded by SendGrid, Inc. The names and logos for smtpapi-nodejs are trademarks of SendGrid, Inc.
 
-### setFilters
-
-You can set a filter using an object literal.
-
-```javascript
-var header     = new smtpapi();
-header.setFilters({
-  'footer': {
-    'setting': {
-      'enable': 1,
-      'text/plain': 'You can haz footers!'
-    }
-  }
-});
-```
-
-### setSendAt
-
-You can set the send_at scheduling param using an UNIX timestamp.
-
-```javascript
-var header     = new smtpapi();
-header.setSendAt(1409348513);
-```
-
-### setSendEachAt
-
-You can set the send_each_at scheduling param using a list of UNIX timestamps.
-
-```javascript
-var header     = new smtpapi();
-header.setSendEachAt([1409348513, 14093485134]);
-```
-
-### addSendEachAt
-
-You can append one or more send_each_at scheduling param(s) to the existing ones using an UNIX timestamp.
-
-```javascript
-var header     = new smtpapi();
-header.setSendEachAt([1409348511, 14093485132]);
-header.addSendEachAt(1409348513]);
-header.addSendEachAt(14093485134);
-```
-
-### setASMGroupID
-
-You can set the ASM Group ID.
-
-```javascript
-var header     = new smtpapi();
-header.setASMGroupID(123);
-```
-
-### [IP Pools](https://sendgrid.com/docs/API_Reference/Web_API_v3/IP_Management/ip_pools.html)
-
-```javascript
-header.setIpPool("testPool");
-```
-
-## SendGrid SMTP Example
-
-The following example builds the X-SMTPAPI headers and adds them to nodemailer. Nodemailer then sends the email through SendGrid. You can use this same code in your application or optionally you can use [sendgrid-nodejs](http://github.com/sendgrid/sendgrid-nodejs).
-
-```javascript
-var nodemailer = require('nodemailer');
-var smtpapi    = require('smtpapi');
-
-// Build the smtpapi header
-var header = new smtpapi();
-header.addTo('you@youremail.com');
-header.setUniqueArgs({cow: 'chicken'});
-
-// Add the smtpapi header to the general headers
-var headers    = { 'x-smtpapi': header.jsonString() };
-
-// Use nodemailer to send the email
-var settings  = {
-  host: "smtp.sendgrid.net",
-  port: parseInt(587, 10),
-  requiresAuth: true,
-  auth: {
-    user: "sendgrid_username",
-    pass: "sendgrid_password"
-  }
-};
-var smtpTransport = nodemailer.createTransport(settings);
-
-var mailOptions = {
-  from:     "Fred Foo <foo@blurdybloop.com>",
-  to:       "bar@blurdybloop.com",
-  subject:  "Hello",
-  text:     "Hello world",
-  html:     "<b>Hello world</b>",
-  headers:  headers
-}
-
-smtpTransport.sendMail(mailOptions, function(error, response) {
-  smtpTransport.close();
-
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Message sent: " + response.message);
-  }
-});
-```
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
-
-## Running Tests
-
-````bash
-npm test
-```
-
-## Deploying
-
-* Confirm tests pass
-* Bump the version in `README.md`, `package.json`, `test/main.js`
-* Update `CHANGELOG.md`
-* Confirm tests pass
-* Commit `Version bump vX.X.X`
-* `npm publish`
-* Push changes to GitHub
-* Release tag on GitHub `vX.X.X`
+![SendGrid Logo]
+(https://assets3.sendgrid.com/mkt/assets/logos_brands/small/sglogo_2015_blue-9c87423c2ff2ff393ebce1ab3bd018a4.png)
