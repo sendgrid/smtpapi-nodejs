@@ -7,9 +7,9 @@ node_js:
 notifications:
   hipchat:
     rooms:
-      secure: DDI++Rv0Z8fexGyUL8dUbgOhioj/UXNUU762iKgR1s3skFDClhHMvbN1vTd6gMXzS7tj/+p+xEXWhJN479UjePTQN21oNYjXOawqAyN7Dxts5afAhK/rDdrzZP9zsLQshdkrs4gOtswDwpsxiRsUef2iMHwSvcWTmj1C5jcGRoA=
+      secure: HFEXR61FFkjN6D1k33pg/8/rqEAqSRG4Xdv0gcJohCXQHoSALeZ9O9en3iozBHGIecNWYtfkAhsvya+PwNSEDL4wNVkTvjNGuwwV1dFgo3EWnrG1D7SgaFWETih674ihSd6dv1OqmWPcNbavvfRWM/JM+w3n/m8aNN8EcHzh/2U=
     template:
     - '<a href="https://travis-ci.org/%{repository}/builds/%{build_id}">%{repository}
       Build %{build_number}</a> on branch <i>%{branch}</i> by %{author}: <strong>%{message}</strong>
-      <a href="https://github.com/sendgrid/docs/commits/%{commit}">View on GitHub</a>'
+      <a href="https://github.com/%{repository}/commits/%{commit}">View on GitHub</a>'
     format: html
