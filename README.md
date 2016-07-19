@@ -8,11 +8,14 @@ All updates to this module is documented in our [CHANGELOG](https://github.com/s
 
 # Installation
 
+## Prerequisites
+
+- Node.js version 0.10, 0.12 or 4
+- The SendGrid service, starting at the [free level](https://sendgrid.com/free?source=smtpapi-nodejs)
+
 ## Environment Variables
 
-First, get your free SendGrid account [here](https://sendgrid.com/free?source=smtpapi-nodejs).
-
-Next, update your environment with your SendGrid credentials. (if you will be sending via nodemailer or other SMTP transport)
+Update your environment with your SendGrid credentials. (if you will be sending via nodemailer or other SMTP transport)
 
 ```bash
 echo "export SENDGRID_USERNAME='YOUR_USERNAME'" > sendgrid.env
@@ -43,7 +46,6 @@ npm install
 
 ## Dependencies
 
-- The SendGrid Service, starting at the [free level](https://sendgrid.com/free?source=smtpapi-nodejs)
 - Please see [package.json](https://github.com/sendgrid/smtpapi-nodejs/blob/master/package.json)
 
 # Quick Start

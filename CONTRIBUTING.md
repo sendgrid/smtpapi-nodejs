@@ -64,6 +64,7 @@ We welcome direct contributions to the smtpapi-nodejs code base. Thank you!
 
 ##### Prerequisites #####
 
+- Node.js version 0.10, 0.12 or 4
 - The SendGrid Service, starting at the [free level](https://sendgrid.com/free?source=smtpapi-nodejs)
 - Please see [package.json](https://github.com/sendgrid/smtpapi-nodejs/blob/master/package.json)
 
