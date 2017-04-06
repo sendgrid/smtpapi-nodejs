@@ -105,6 +105,11 @@ describe('smtapi', function() {
     header.jsonString().should.eql(t.set_send_at);
   });
 
+  it('setBatchId', function() {
+    header.setBatchId('apples');
+    header.jsonString().should.eql(t.set_batch_id);
+  });
+
   it('setSendAt', function() {
     header.setSendEachAt([1409348513, 1409348514, 1409348515]);
     header.jsonString().should.eql(t.set_send_each_at);

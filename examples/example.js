@@ -58,6 +58,10 @@ header.setFilters({
 // You can set the send_at scheduling param using an UNIX timestamp.
 header.setSendAt(1409348513);
 
+// setBatchId
+// You can set the batch_id scheduling param using a string.
+header.setBatchId('apples');
+
 // setSendEachAt
 // You can set the send_each_at scheduling param using a list of UNIX timestamps.
 //header.setSendEachAt([1409348513, 14093485134]);
