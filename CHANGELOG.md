@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.3.1] - 2017-4-10
+### Fixed
+- #16 fix issue where concat was used incorrectly
+- Thanks to [Limian Wang](https://github.com/limianwang) for the PR!
+
 ## [1.3.0] - 2017-4-6
 ### Added
 - #19 Adds setBatchId method

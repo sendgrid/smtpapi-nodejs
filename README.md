@@ -33,7 +33,7 @@ Add the following to your `package.json` file:
   ...
   "dependencies": {
     ...
-    "smtpapi": "1.3.0"
+    "smtpapi": "1.3.1"
   }
 }
 ```
