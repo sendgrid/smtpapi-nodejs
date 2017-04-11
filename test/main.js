@@ -9,7 +9,7 @@ describe('smtapi', function() {
   });
 
   it('version should be set', function() {
-    header.version.should.eql("1.3.0");
+    header.version.should.eql("1.3.1");
   });
 
   it('has a jsonString method', function() {
