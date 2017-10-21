@@ -38,7 +38,7 @@ Add the following to your `package.json` file:
 }
 ```
 
-Install smtpapi-nodejs and its dependencies:
+Install smtpapi_nodejs and its dependencies:
 
 ```bash
 npm install
@@ -46,7 +46,7 @@ npm install
 
 ## Dependencies
 
-- Please see [package.json](https://github.com/sendgrid/smtpapi-nodejs/blob/master/package.json)
+- Please see [package.json](https://github.com/sendgrid/smtpapi_nodejs/blob/master/package.json)
 
 # Quick Start
 
@@ -61,27 +61,27 @@ console.log(header.jsonString());
 # Usage
 
 - [SendGrid Docs](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
-- [Example Code](https://github.com/sendgrid/smtpapi-nodejs/blob/master/examples)
+- [Example Code](https://github.com/sendgrid/smtpapi_nodejs/blob/master/examples)
 
 ## Roadmap
 
-If you are interested in the future direction of this project, please take a look at our [milestones](https://github.com/sendgrid/smtpapi-nodejs/milestones). We would love to hear your feedback.
+If you are interested in the future direction of this project, please take a look at our [milestones](https://github.com/sendgrid/smtpapi_nodejs/milestones). We would love to hear your feedback.
 
 ## How to Contribute
 
-We encourage contribution to our projects, please see our [CONTRIBUTING](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md) guide for details.
+We encourage contribution to our projects, please see our [CONTRIBUTING](https://github.com/sendgrid/smtpapi_nodejs/blob/master/CONTRIBUTING.md) guide for details.
 
 Quick links:
 
-- [Feature Request](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md#feature_request)
-- [Bug Reports](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md#submit_a_bug_report)
-- [Sign the CLA to Create a Pull Request](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md#cla)
-- [Improvements to the Codebase](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md#improvements_to_the_codebase)
+- [Feature Request](https://github.com/sendgrid/smtpapi_nodejs/blob/master/CONTRIBUTING.md#feature_request)
+- [Bug Reports](https://github.com/sendgrid/smtpapi_nodejs/blob/master/CONTRIBUTING.md#submit_a_bug_report)
+- [Sign the CLA to Create a Pull Request](https://github.com/sendgrid/smtpapi_nodejs/blob/master/CONTRIBUTING.md#cla)
+- [Improvements to the Codebase](https://github.com/sendgrid/smtpapi_nodejs/blob/master/CONTRIBUTING.md#improvements_to_the_codebase)
 
 # About
 
 smtpapi-nodejs is guided and supported by the SendGrid [Developer Experience Team](mailto:dx@sendgrid.com).
 
-smtpapi-nodejs is maintained and funded by SendGrid, Inc. The names and logos for smtpapi-nodejs are trademarks of SendGrid, Inc.
+smtpapi-nodejs is maintained and funded by SendGrid, Inc. The names and logos for smtpapi_nodejs are trademarks of SendGrid, Inc.
 
-![SendGrid Logo](https://uiux.s3.amazonaws.com/2016-logos/email-logo%402x.png)
+![SendGrid Logo](https://uiux.s3.amazonaws.com/2016_logos/email_logo%402x.png)
