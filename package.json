@@ -27,8 +27,8 @@
   "dependencies": {
   },
   "devDependencies": {
-    "mocha": "",
-    "should": ""
+    "mocha": "3.5.3",
+    "should": "13.1.2"
     },
   "contributors": [
     {
