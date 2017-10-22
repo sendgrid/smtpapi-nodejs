@@ -143,9 +143,4 @@ describe('smtapi', function() {
     header.setIpPool('testPool');
     header.jsonString().should.eql(t.set_ip_pool);
   });
-
-  it('get', function() {
-    header.addTo('addTo@mailinator.com');
-    header.jsonString().should.eql(t.get);
-  });
 });
