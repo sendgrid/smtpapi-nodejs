@@ -13,6 +13,14 @@
 
 All updates to this module are documented in our [CHANGELOG](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CHANGELOG.md).
 
+# Table of Contents
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Usage](#usage)
+- [About](#about)
+- [License](#license)
+
+<a name="installation"></a>
 # Installation
 
 ## Prerequisites
@@ -55,6 +63,7 @@ npm install
 
 - Please see [package.json](https://github.com/sendgrid/smtpapi-nodejs/blob/master/package.json)
 
+<a name="quick-start"></a>
 # Quick Start
 
 ```javascript
@@ -65,6 +74,7 @@ header.setUniqueArgs({cow: 'chicken'});
 console.log(header.jsonString());
 ```
 
+<a name="usage"></a>
 # Usage
 
 - [SendGrid Docs](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
@@ -85,11 +95,13 @@ Quick links:
 - [Sign the CLA to Create a Pull Request](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md#cla)
 - [Improvements to the Codebase](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md#improvements-to-the-codebase)
 
+<a name="about"></a>
 # About
 
 smtpapi-nodejs is guided and supported by the SendGrid [Developer Experience Team](mailto:dx@sendgrid.com).
 
 smtpapi-nodejs is maintained and funded by SendGrid, Inc. The names and logos for smtpapi-nodejs are trademarks of SendGrid, Inc.
 
+<a name="license"></a>
 # License
 [The MIT License (MIT)](LICENSE.txt)
