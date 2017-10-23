@@ -17,6 +17,8 @@ All updates to this module are documented in our [CHANGELOG](https://github.com/
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [Usage](#usage)
+- [Roadmap](#roadmap)
+- [How to Contribute](#contribute)
 - [About](#about)
 - [License](#license)
 
@@ -80,11 +82,13 @@ console.log(header.jsonString());
 - [SendGrid Docs](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
 - [Example Code](https://github.com/sendgrid/smtpapi-nodejs/blob/master/examples)
 
-## Roadmap
+<a name="roadmap"></a>
+# Roadmap
 
 If you are interested in the future direction of this project, please take a look at our [milestones](https://github.com/sendgrid/smtpapi-nodejs/milestones). We would love to hear your feedback.
 
-## How to Contribute
+<a name="contribute"></a>
+# How to Contribute
 
 We encourage contribution to our projects, please see our [CONTRIBUTING](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md) guide for details.
 
