@@ -16,7 +16,7 @@ All updates to this module are documented in our [CHANGELOG](https://github.com/
 # Table of Contents
 - [Installation](#installation)
 - [Quick Start](#quick-start)
-- [Usage](#usage)
+- [Library Usage Documentation](USAGE.md)
 - [Roadmap](#roadmap)
 - [How to Contribute](#contribute)
 - [About](#about)
@@ -78,9 +78,6 @@ console.log(header.jsonString());
 
 <a name="usage"></a>
 # Usage
-
-- [SendGrid Docs](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
-- [Example Code](https://github.com/sendgrid/smtpapi-nodejs/blob/master/examples)
 
 <a name="roadmap"></a>
 # Roadmap
