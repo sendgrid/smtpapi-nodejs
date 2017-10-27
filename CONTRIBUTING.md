@@ -137,6 +137,7 @@ Generally, we follow the style guidelines as suggested by the official language.
 Please run your code through:
 
 - [ESLint](http://eslint.org/) with the standard style guide.
+- [esdoc](https://github.com/sendgrid/smtpapi-nodejs/blob/master/.github/USAGE.md) to check the documentation coverage of your added code.
 
 ## Creating a Pull Request<a name="creating_a_pull_request"></a>
 
