@@ -79,6 +79,7 @@ header.setASMGroupID(123);
 // [IP Pools](https://sendgrid.com/docs/API_Reference/Web_API_v3/IP_Management/ip_pools.html)
 header.setIpPool("testPool");
 
+// You can verify headers set (for debugging/logging purposes)
 console.log(header.jsonString());
 
 // Send usin Nodemailer
