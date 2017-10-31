@@ -5,11 +5,10 @@ node_js:
 - "6"
 - "7"
 - "8"
-install:
+before_install:
   - npm install -g codecov
 script:
-  - istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
-  - codecov
+  - npm run cover
 notifications:
   hipchat:
     rooms:
