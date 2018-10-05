@@ -1,0 +1,11 @@
+#!/bin/node
+
+const path  = require('path');
+const parse = require('changelog-parser');
+parse(path.join(path.dirname(__dirname),'CHANGELOG.md'))
+  .then((res) => {
+    const latest  = res.versions[0];
+    const version = latest.version;
+    console.log(version);
+  })
+  .catch(console.error)

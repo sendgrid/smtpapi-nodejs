@@ -5,6 +5,17 @@ node_js:
 - "6"
 - "7"
 - "8"
+before_install:
+- npm install -g npm@2
+before_deploy: 'npm --no-git-tag-version version $(node scripts/version)'
+deploy:
+  provider: npm
+  email:   '**Add NPM Account email**'
+  api_key: '**Add Encrypted API Key**'
+  on:
+    repo:   sendgrid/smtpapi-nodejs
+    tags:   false
+    branch: master
 notifications:
   hipchat:
     rooms:
