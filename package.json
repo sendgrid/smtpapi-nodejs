@@ -31,9 +31,10 @@
     "esdoc-type-inference-plugin": "^1.0.1"
   },
   "devDependencies": {
+    "changelog-parser": "^2.5.0",
     "mocha": "3.5.3",
     "should": "13.1.2"
-    },
+  },
   "contributors": [
     {
       "name": "Yamil Asusta",
