@@ -62,12 +62,12 @@ All notable changes to this project will be documented in this file.
 [2017-04-10] Version 1.3.1
 --------------------------
 ### Fixed
-- #16 fix issue where concat was used incorrectly
+- #16 Fixed issue where concat was used incorrectly.
 - Thanks to [Limian Wang](https://github.com/limianwang) for the PR!
 
 ## [1.3.0] - 2017-4-6
 ### Added
-- #19 Adds setBatchId method
+- #19 Adds setBatchId method.
 - Thanks to [mell0kat](https://github.com/mell0kat) for the PR!
 
 ## [1.2.0] - 2015-7-19
