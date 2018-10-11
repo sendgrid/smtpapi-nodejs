@@ -111,6 +111,7 @@ async function fetchPRs (owner, name, since)
  * Changelog Helpers */
 function checkAgainstWords (title, words)
 {
+  title = title.toLowerCase();
   for (let i = 0; i < words.length; i++)
     if (title.indexOf(words[0]) !== -1) return true;
   return false; 
