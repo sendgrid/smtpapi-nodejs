@@ -77,9 +77,11 @@ cd smtpapi-nodejs
 npm install
 ```
 
-## Environment Variables
+### Environment Variables
 
 First, get your free SendGrid account [here](https://sendgrid.com/free?source=smtpapi-nodejs).
+
+Next, update your environment with your [SENDGRID_API_KEY](https://app.sendgrid.com/settings/api_keys).
 
 ```bash
 echo "export SENDGRID_USERNAME='YOUR_USERNAME'" > sendgrid.env
