@@ -7,8 +7,8 @@ Hello! Thank you for choosing to help contribute to one of the SendGrid open sou
 - [Improvements to the Codebase](#improvements-to-the-codebase)
 - [Understanding the Code Base](#understanding-the-codebase)
 - [Testing](#testing)
-- [Style Guidelines & Naming Conventions](#style-guidelines-and-naming-conventions)
-- [Creating a Pull Request](#creating-a-pull-request)
+- [Style Guidelines & Naming Conventions](#style_guidelines_and_naming_conventions)
+- [Creating a Pull Request](#creating_a_pull_request)
 - [Code Reviews](#code-reviews)
 
 <a name="roadmap"></a>
