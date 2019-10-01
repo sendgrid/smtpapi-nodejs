@@ -108,4 +108,3 @@ smtpapi-nodejs is maintained and funded by SendGrid, Inc. The names and logos fo
 <a name="license"></a>
 # License
 [The MIT License (MIT)](LICENSE.txt)
-
