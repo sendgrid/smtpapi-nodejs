@@ -44,22 +44,10 @@ source ./sendgrid.env
 
 The following recommended installation requires [npm](https://npmjs.org/). If you are unfamiliar with npm, see the [npm docs](https://npmjs.org/doc/). Npm comes installed with Node.js since node version 0.8.x therefore you likely already have it.
 
-Add the following to your `package.json` file:
-
-```json
-{
-  ...
-  "dependencies": {
-    ...
-    "smtpapi": "1.3.1"
-  }
-}
-```
-
 Install smtpapi-nodejs and its dependencies:
 
 ```bash
-npm install
+npm install smtpapi
 ```
 
 ## Dependencies
