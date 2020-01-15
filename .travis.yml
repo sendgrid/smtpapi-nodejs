@@ -1,10 +1,18 @@
 language: node_js
 node_js:
-  - "4"
-  - "5"
-  - "6"
-  - "7"
-  - "8"
-  - "10"
-  - "lts/*"
-  - "node"
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 10
+  - lts/*
+  - node
+deploy:
+  - provider: npm
+    email: twilio-ci@twilio.com
+    api_key:
+      secure: WnTywc45W9hTmt94JR8wjr7+NByNJV7Tqr94I0ShRWKuVMItmnnvVGMVUiASxZGBdotLXEVZGfVop2A1pdQHtr6lqBzYt/RN7lQ4ugHpgbMSSn69CQvQyouZzZRhdvCei/1sITp+VMIwU3ikU8dLKvy/sxeSgIyt6gjdmsIGkNU=
+    on:
+      tags: true
+      node: 10
