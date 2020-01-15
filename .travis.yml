@@ -1,16 +1,10 @@
 language: node_js
 node_js:
-- "4"
-- "5"
-- "6"
-- "7"
-- "8"
-notifications:
-  hipchat:
-    rooms:
-      secure: HFEXR61FFkjN6D1k33pg/8/rqEAqSRG4Xdv0gcJohCXQHoSALeZ9O9en3iozBHGIecNWYtfkAhsvya+PwNSEDL4wNVkTvjNGuwwV1dFgo3EWnrG1D7SgaFWETih674ihSd6dv1OqmWPcNbavvfRWM/JM+w3n/m8aNN8EcHzh/2U=
-    template:
-    - '<a href="https://travis-ci.org/%{repository}/builds/%{build_id}">%{repository}
-      Build %{build_number}</a> on branch <i>%{branch}</i> by %{author}: <strong>%{message}</strong>
-      <a href="https://github.com/%{repository}/commits/%{commit}">View on GitHub</a>'
-    format: html
+  - "4"
+  - "5"
+  - "6"
+  - "7"
+  - "8"
+  - "10"
+  - "lts/*"
+  - "node"

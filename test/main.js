@@ -9,10 +9,6 @@ describe('smtapi', function() {
     header = new smtpapi();
   });
 
-  it('version should be set', function() {
-    header.version.should.eql("1.3.1");
-  });
-
   it('has a jsonString method', function() {
     header.jsonString().should.eql(t.json_string);
   });
@@ -147,14 +143,6 @@ describe('smtapi', function() {
 });
 
 describe('smtapi-nodejs repo', function() {
-  it('should have ./Docker or docker/Docker file', function() {
-    assert(fileExists('Docker') || fileExists('docker/Docker'));
-  });
-
-  it('should have ./docker-compose.yml or ./docker/docker-compose.yml file', function() {
-    assert(fileExists('docker-compose.yml') || fileExists('docker/docker-compose.yml'));
-  });
-
   it('should have ./.env_sample file', function() {
     assert(fileExists('.env_sample'));
   });
@@ -187,8 +175,8 @@ describe('smtapi-nodejs repo', function() {
     assert(fileExists('.github/ISSUE_TEMPLATE'));
   });
 
-  it('should have ./LICENSE.md file', function() {
-    assert(fileExists('LICENSE.md'));
+  it('should have ./LICENSE.txt file', function() {
+    assert(fileExists('LICENSE.txt'));
   });
 
   it('should have ./.github/PULL_REQUEST_TEMPLATE file', function() {
@@ -205,10 +193,6 @@ describe('smtapi-nodejs repo', function() {
 
   it('should have ./USAGE.md file', function() {
     assert(fileExists('USAGE.md'));
-  });
-
-  it('should have ./USE_CASES.md file', function() {
-    assert(fileExists('USE_CASES.md'));
   });
 
   function fileExists(filepath) {
