@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2020-01-22] Version 1.4.1
+--------------------------
+**Library - Docs**
+- [PR #105](https://github.com/sendgrid/smtpapi-nodejs/pull/105): baseline all the templated markdown docs. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+
+
 [2020-01-15] Version 1.4.0
 --------------------------
 **Library - Docs**
