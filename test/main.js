@@ -180,8 +180,8 @@ describe('smtapi-nodejs repo', function() {
     assert(fileExists('.github/ISSUE_TEMPLATE'));
   });
 
-  it('should have ./LICENSE.txt file', function() {
-    assert(fileExists('LICENSE.txt'));
+  it('should have ./LICENSE.md file', function() {
+    assert(fileExists('LICENSE.md'));
   });
 
   it('should have ./.github/PULL_REQUEST_TEMPLATE file', function() {
