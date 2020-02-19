@@ -9,10 +9,6 @@ describe('smtapi', function() {
     header = new smtpapi();
   });
 
-  it('version should be set', function() {
-    header.version.should.eql("1.3.1");
-  });
-
   it('has a jsonString method', function() {
     header.jsonString().should.eql(t.json_string);
   });
@@ -147,7 +143,6 @@ describe('smtapi', function() {
 });
 
 describe('smtapi-nodejs repo', function() {
-
   it('should have ./.env_sample file', function() {
     assert(fileExists('.env_sample'));
   });
@@ -176,16 +171,16 @@ describe('smtapi-nodejs repo', function() {
     assert(fileExists('CONTRIBUTING.md'));
   });
 
-  it('should have ./.github/ISSUE_TEMPLATE file', function() {
-    assert(fileExists('.github/ISSUE_TEMPLATE'));
+  it('should have ./ISSUE_TEMPLATE.md file', function() {
+    assert(fileExists('ISSUE_TEMPLATE.md'));
   });
 
   it('should have ./LICENSE.md file', function() {
     assert(fileExists('LICENSE.md'));
   });
 
-  it('should have ./.github/PULL_REQUEST_TEMPLATE file', function() {
-    assert(fileExists('.github/PULL_REQUEST_TEMPLATE'));
+  it('should have ./PULL_REQUEST_TEMPLATE.md file', function() {
+    assert(fileExists('PULL_REQUEST_TEMPLATE.md'));
   });
 
   it('should have ./README.md file', function() {
