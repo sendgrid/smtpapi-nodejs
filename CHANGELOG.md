@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2020-02-19] Version 1.4.2
+--------------------------
+**Library - Test**
+- [PR #99](https://github.com/sendgrid/smtpapi-nodejs/pull/99): Update unittest removing unnecessary scenarios. Thanks to [@rafaelverger](https://github.com/rafaelverger)!
+
+
 [2020-01-22] Version 1.4.1
 --------------------------
 **Library - Docs**
