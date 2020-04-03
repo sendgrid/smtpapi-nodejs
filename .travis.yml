@@ -16,3 +16,11 @@ deploy:
     on:
       tags: true
       node: 10
+
+notifications:
+  slack:
+    if: branch = master
+    on_success: never
+    on_failure: change
+    rooms:
+      - secure: S99/9xKfMMtAv+CD57Vq4HVfu4UO8jECatRYditwmcrP72BOjkW5OdC5cLAe4hl1h7Bhsdj5bdHQU9s4Vqje/q3aMaJQ3gCW1lzpj0YZO5BFZJk3cBR3Cuw4La0mv6IFa76nQhGjYPXepxdqbnMLApj6LuOFkl5edIUyshX+J38=
