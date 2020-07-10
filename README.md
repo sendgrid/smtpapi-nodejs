@@ -26,7 +26,7 @@ All updates to this module are documented in our [CHANGELOG](https://github.com/
 
 ## Prerequisites
 
-- Node.js version 0.10, 0.12 or 4
+- Node.js version 4, 5, 6, 7, 8, 10, 12, or 14
 - The SendGrid service, starting at the [free level](https://sendgrid.com/free?source=smtpapi-nodejs)
 
 ## Environment Variables
