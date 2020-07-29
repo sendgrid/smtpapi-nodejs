@@ -1,20 +1,33 @@
 language: node_js
 node_js:
-- "4"
-- "5"
-- "6"
-- "7"
-- "8"
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 10
+  - lts/*
+  - node
+
 before_install:
   - npm install -g codecov
 script:
   - npm run cover
+
+deploy:
+  - provider: npm
+    email: twilio-ci@twilio.com
+    api_key:
+      secure: WnTywc45W9hTmt94JR8wjr7+NByNJV7Tqr94I0ShRWKuVMItmnnvVGMVUiASxZGBdotLXEVZGfVop2A1pdQHtr6lqBzYt/RN7lQ4ugHpgbMSSn69CQvQyouZzZRhdvCei/1sITp+VMIwU3ikU8dLKvy/sxeSgIyt6gjdmsIGkNU=
+    on:
+      tags: true
+      node: 10
+
 notifications:
-  hipchat:
+  slack:
+    if: branch = main
+    on_pull_requests: false
+    on_success: never
+    on_failure: change
     rooms:
-      secure: HFEXR61FFkjN6D1k33pg/8/rqEAqSRG4Xdv0gcJohCXQHoSALeZ9O9en3iozBHGIecNWYtfkAhsvya+PwNSEDL4wNVkTvjNGuwwV1dFgo3EWnrG1D7SgaFWETih674ihSd6dv1OqmWPcNbavvfRWM/JM+w3n/m8aNN8EcHzh/2U=
-    template:
-    - '<a href="https://travis-ci.org/%{repository}/builds/%{build_id}">%{repository}
-      Build %{build_number}</a> on branch <i>%{branch}</i> by %{author}: <strong>%{message}</strong>
-      <a href="https://github.com/%{repository}/commits/%{commit}">View on GitHub</a>'
-    format: html
+      - secure: S99/9xKfMMtAv+CD57Vq4HVfu4UO8jECatRYditwmcrP72BOjkW5OdC5cLAe4hl1h7Bhsdj5bdHQU9s4Vqje/q3aMaJQ3gCW1lzpj0YZO5BFZJk3cBR3Cuw4La0mv6IFa76nQhGjYPXepxdqbnMLApj6LuOFkl5edIUyshX+J38=

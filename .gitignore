@@ -3,3 +3,5 @@ node_modules/
 npm-debug.log
 docs
 .env
+package-lock.json
+*.bak

@@ -9,3 +9,7 @@ Using the .esdoc.json file, esdoc will create documentation in the docs director
 ## Checking docs coverage
 
 You will find a coverage.json file in the docs directory. This will contain information about the documentation coverage for each of the different files in this repo.
+
+# More information 
+- [SendGrid Docs](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
+- [Example Code](https://github.com/sendgrid/smtpapi-nodejs/blob/master/examples)

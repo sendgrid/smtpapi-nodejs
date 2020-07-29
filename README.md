@@ -3,20 +3,21 @@
 [![BuildStatus](https://travis-ci.org/sendgrid/smtpapi-nodejs.png?branch=master)](https://travis-ci.org/sendgrid/smtpapi-nodejs)
 [![npm](https://img.shields.io/npm/v/smtpapi.svg)](https://www.npmjs.com/package/smtpapi)
 [![Email Notifications Badge](https://dx.sendgrid.com/badge/nodejs)](https://dx.sendgrid.com/newsletter/nodejs)
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.txt)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
 [![Twitter Follow](https://img.shields.io/twitter/follow/sendgrid.svg?style=social&label=Follow)](https://twitter.com/sendgrid)
 [![GitHub contributors](https://img.shields.io/github/contributors/sendgrid/smtpapi-nodejs.svg)](https://github.com/sendgrid/smtpapi-nodejs/graphs/contributors)
 
 **This node module allows you to quickly and more easily generate SendGrid X-SMTPAPI headers.**
 
 # Announcements
+**The default branch name for this repository has been changed to `main` as of 07/27/2020.**
 
 All updates to this module are documented in our [CHANGELOG](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CHANGELOG.md).
 
 # Table of Contents
 - [Installation](#installation)
 - [Quick Start](#quick-start)
-- [Usage](#usage)
+- [Library Usage Documentation](USAGE.md)
 - [Roadmap](#roadmap)
 - [How to Contribute](#contribute)
 - [About](#about)
@@ -27,7 +28,7 @@ All updates to this module are documented in our [CHANGELOG](https://github.com/
 
 ## Prerequisites
 
-- Node.js version 0.10, 0.12 or 4
+- Node.js version 4, 5, 6, 7, 8, 10, 12, or 14
 - The SendGrid service, starting at the [free level](https://sendgrid.com/free?source=smtpapi-nodejs)
 
 ## Environment Variables
@@ -43,22 +44,10 @@ source ./sendgrid.env
 
 The following recommended installation requires [npm](https://npmjs.org/). If you are unfamiliar with npm, see the [npm docs](https://npmjs.org/doc/). Npm comes installed with Node.js since node version 0.8.x therefore you likely already have it.
 
-Add the following to your `package.json` file:
-
-```json
-{
-  ...
-  "dependencies": {
-    ...
-    "smtpapi": "1.3.1"
-  }
-}
-```
-
 Install smtpapi-nodejs and its dependencies:
 
 ```bash
-npm install
+npm install smtpapi
 ```
 
 ## Dependencies
@@ -79,9 +68,6 @@ console.log(header.jsonString());
 <a name="usage"></a>
 # Usage
 
-- [SendGrid Docs](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
-- [Example Code](https://github.com/sendgrid/smtpapi-nodejs/blob/master/examples)
-
 <a name="roadmap"></a>
 # Roadmap
 
@@ -96,16 +82,18 @@ Quick links:
 
 - [Feature Request](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md#feature-request)
 - [Bug Reports](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md#submit-a-bug-report)
-- [Sign the CLA to Create a Pull Request](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md#cla)
 - [Improvements to the Codebase](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md#improvements-to-the-codebase)
+- [Review Pull Requests](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md#code-reviews)
 
 <a name="about"></a>
 # About
 
-smtpapi-nodejs is guided and supported by the SendGrid [Developer Experience Team](mailto:dx@sendgrid.com).
+smtpapi-nodejs is maintained and funded by Twilio SendGrid, Inc. The names and logos for smtpapi-nodejs are trademarks of Twilio SendGrid, Inc.
 
-smtpapi-nodejs is maintained and funded by SendGrid, Inc. The names and logos for smtpapi-nodejs are trademarks of SendGrid, Inc.
+If you need help installing or using the library, please check the [Twilio SendGrid Support Help Center](https://support.sendgrid.com).
+
+If you've instead found a bug in the library or would like new features added, go ahead and open issues or pull requests against this repo!
 
 <a name="license"></a>
 # License
-[The MIT License (MIT)](LICENSE.txt)
+[The MIT License (MIT)](LICENSE.md)
