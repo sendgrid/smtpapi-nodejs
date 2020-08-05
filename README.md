@@ -1,6 +1,6 @@
 ![SendGrid Logo](https://uiux.s3.amazonaws.com/2016-logos/email-logo%402x.png)
 
-[![BuildStatus](https://travis-ci.org/sendgrid/smtpapi-nodejs.png?branch=master)](https://travis-ci.org/sendgrid/smtpapi-nodejs)
+[![BuildStatus](https://travis-ci.org/sendgrid/smtpapi-nodejs.png?branch=main)](https://travis-ci.org/sendgrid/smtpapi-nodejs)
 [![npm](https://img.shields.io/npm/v/smtpapi.svg)](https://www.npmjs.com/package/smtpapi)
 [![Email Notifications Badge](https://dx.sendgrid.com/badge/nodejs)](https://dx.sendgrid.com/newsletter/nodejs)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
@@ -12,7 +12,7 @@
 # Announcements
 **The default branch name for this repository has been changed to `main` as of 07/27/2020.**
 
-All updates to this module are documented in our [CHANGELOG](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CHANGELOG.md).
+All updates to this module are documented in our [CHANGELOG](https://github.com/sendgrid/smtpapi-nodejs/blob/HEAD/CHANGELOG.md).
 
 # Table of Contents
 - [Installation](#installation)
@@ -52,7 +52,7 @@ npm install smtpapi
 
 ## Dependencies
 
-- Please see [package.json](https://github.com/sendgrid/smtpapi-nodejs/blob/master/package.json)
+- Please see [package.json](https://github.com/sendgrid/smtpapi-nodejs/blob/HEAD/package.json)
 
 <a name="quick-start"></a>
 # Quick Start
@@ -76,14 +76,14 @@ If you are interested in the future direction of this project, please take a loo
 <a name="contribute"></a>
 # How to Contribute
 
-We encourage contribution to our projects, please see our [CONTRIBUTING](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md) guide for details.
+We encourage contribution to our projects, please see our [CONTRIBUTING](https://github.com/sendgrid/smtpapi-nodejs/blob/HEAD/CONTRIBUTING.md) guide for details.
 
 Quick links:
 
-- [Feature Request](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md#feature-request)
-- [Bug Reports](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md#submit-a-bug-report)
-- [Improvements to the Codebase](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md#improvements-to-the-codebase)
-- [Review Pull Requests](https://github.com/sendgrid/smtpapi-nodejs/blob/master/CONTRIBUTING.md#code-reviews)
+- [Feature Request](https://github.com/sendgrid/smtpapi-nodejs/blob/HEAD/CONTRIBUTING.md#feature-request)
+- [Bug Reports](https://github.com/sendgrid/smtpapi-nodejs/blob/HEAD/CONTRIBUTING.md#submit-a-bug-report)
+- [Improvements to the Codebase](https://github.com/sendgrid/smtpapi-nodejs/blob/HEAD/CONTRIBUTING.md#improvements-to-the-codebase)
+- [Review Pull Requests](https://github.com/sendgrid/smtpapi-nodejs/blob/HEAD/CONTRIBUTING.md#code-reviews)
 
 <a name="about"></a>
 # About

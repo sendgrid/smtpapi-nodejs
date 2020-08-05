@@ -51,7 +51,7 @@ We welcome direct contributions to the smtpapi-nodejs code base. Thank you!
 
 - Node.js version 0.10, 0.12 or 4
 - The SendGrid Service, starting at the [free level](https://sendgrid.com/free?source=smtpapi-nodejs)
-- Please see [package.json](https://github.com/sendgrid/smtpapi-nodejs/blob/master/package.json)
+- Please see [package.json](https://github.com/sendgrid/smtpapi-nodejs/blob/HEAD/package.json)
 
 ##### Initial setup: #####
 
@@ -76,7 +76,7 @@ source ./sendgrid.env
 
 ##### Execute: #####
 
-See the [examples folder](https://github.com/sendgrid/smtpapi-nodejs/tree/master/examples) to get started quickly.
+See the [examples folder](https://github.com/sendgrid/smtpapi-nodejs/tree/HEAD/examples) to get started quickly.
 
 To run the example (after updating the settings and the emails):
 
@@ -104,9 +104,9 @@ Source code.
 
 All PRs require passing tests before the PR will be reviewed.
 
-All test files are in the [`test`](https://github.com/sendgrid/smtpapi-nodejs/tree/master/test) directory.
+All test files are in the [`test`](https://github.com/sendgrid/smtpapi-nodejs/tree/HEAD/test) directory.
 
-For the purposes of contributing to this repo, please update the [`main.js`](https://github.com/sendgrid/smtpapi-nodejs/blob/master/test/main.js) file with unit tests as you modify the code.
+For the purposes of contributing to this repo, please update the [`main.js`](https://github.com/sendgrid/smtpapi-nodejs/blob/HEAD/test/main.js) file with unit tests as you modify the code.
 
 To run the tests:
 
@@ -124,7 +124,7 @@ Generally, we follow the style guidelines as suggested by the official language.
 Please run your code through:
 
 - [ESLint](http://eslint.org/) with the standard style guide.
-- [esdoc](https://github.com/sendgrid/smtpapi-nodejs/blob/master/USAGE.md) to check the documentation coverage of your added code.
+- [esdoc](https://github.com/sendgrid/smtpapi-nodejs/blob/HEAD/USAGE.md) to check the documentation coverage of your added code.
 
 ## Creating a Pull Request<a name="creating-a-pull-request"></a>
 
@@ -167,7 +167,7 @@ Please run your code through:
 5. Locally merge (or rebase) the upstream development branch into your topic branch:
 
    ```bash
-   git pull [--rebase] upstream master
+   git pull [--rebase] upstream main
    ```
 
 6. Push your topic branch up to your fork:
@@ -177,7 +177,7 @@ Please run your code through:
    ```
 
 7. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/)
-    with a clear title and description against the `master` branch. All tests must be passing before we will review the PR.
+    with a clear title and description against the `main` branch. All tests must be passing before we will review the PR.
 
 <a name="code-reviews"></a>
 ## Code Reviews
