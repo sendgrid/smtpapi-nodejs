@@ -12,7 +12,7 @@ If you can't find a solution below, please open an [issue](https://github.com/se
 <a name="versions"></a>
 ## Versions
 
-We follow the MAJOR.MINOR.PATCH versioning scheme as described by [SemVer.org](http://semver.org). Therefore, we recommend that you always pin (or vendor) the particular version you are working with to your code and never auto-update to the latest version. Especially when there is a MAJOR point release, since that is guaranteed to be a breaking change. Changes are documented in the [CHANGELOG](https://github.com/sendgrid/smtpapi-nodejs/blob/HEAD/CHANGELOG.md) section.
+We follow the MAJOR.MINOR.PATCH versioning scheme as described by [SemVer.org](http://semver.org). Therefore, we recommend that you always pin (or vendor) the particular version you are working with to your code and never auto-update to the latest version. Especially when there is a MAJOR point release, since that is guaranteed to be a breaking change. Changes are documented in the [CHANGELOG](CHANGELOG.md) section.
 
 <a name="package-manager"></a>
 ## Using the Package Manager

@@ -12,4 +12,4 @@ You will find a coverage.json file in the docs directory. This will contain info
 
 # More information 
 - [SendGrid Docs](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
-- [Example Code](https://github.com/sendgrid/smtpapi-nodejs/blob/HEAD/examples)
+- [Example Code](examples)
