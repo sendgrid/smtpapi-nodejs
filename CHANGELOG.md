@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2020-08-19] Version 1.4.3
+--------------------------
+**Library - Chore**
+- [PR #107](https://github.com/sendgrid/smtpapi-nodejs/pull/107): update GitHub branch references to use HEAD. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+
+
 [2020-02-19] Version 1.4.2
 --------------------------
 **Library - Test**
