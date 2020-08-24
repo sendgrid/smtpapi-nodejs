@@ -18,7 +18,6 @@ All updates to this module are documented in our [CHANGELOG](CHANGELOG.md).
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [Library Usage Documentation](USAGE.md)
-- [Roadmap](#roadmap)
 - [How to Contribute](#contribute)
 - [About](#about)
 - [License](#license)
@@ -67,11 +66,6 @@ console.log(header.jsonString());
 
 <a name="usage"></a>
 # Usage
-
-<a name="roadmap"></a>
-# Roadmap
-
-If you are interested in the future direction of this project, please take a look at our [milestones](https://github.com/sendgrid/smtpapi-nodejs/milestones). We would love to hear your feedback.
 
 <a name="contribute"></a>
 # How to Contribute
