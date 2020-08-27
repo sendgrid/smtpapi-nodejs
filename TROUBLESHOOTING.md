@@ -5,14 +5,15 @@ If you can't find a solution below, please open an [issue](https://github.com/se
 
 ## Table of Contents
 
-* [Versions](#versions)
-* [Using the Package Manager](#package-manager)
-* [Viewing the Request Body](#stmpapi-header)
+- [Table of Contents](#table-of-contents)
+- [Versions](#versions)
+- [Using the Package Manager](#using-the-package-manager)
+- [Outputting the STMPAPI Header](#outputting-the-stmpapi-header)
 
 <a name="versions"></a>
 ## Versions
 
-We follow the MAJOR.MINOR.PATCH versioning scheme as described by [SemVer.org](http://semver.org). Therefore, we recommend that you always pin (or vendor) the particular version you are working with to your code and never auto-update to the latest version. Especially when there is a MAJOR point release, since that is guaranteed to be a breaking change. Changes are documented in the [CHANGELOG](CHANGELOG.md) section.
+We follow the MAJOR.MINOR.PATCH versioning scheme as described by [SemVer.org](http://semver.org). Therefore, we recommend that you always pin (or vendor) the particular version you are working with to your code and never auto-update to the latest version. Especially when there is a MAJOR point release since that is guaranteed to be a breaking change. Changes are documented in the [CHANGELOG](CHANGELOG.md) section.
 
 <a name="package-manager"></a>
 ## Using the Package Manager

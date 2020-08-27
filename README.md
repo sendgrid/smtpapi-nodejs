@@ -41,7 +41,7 @@ echo "sendgrid.env" >> .gitignore
 source ./sendgrid.env
 ```
 
-The following recommended installation requires [npm](https://npmjs.org/). If you are unfamiliar with npm, see the [npm docs](https://npmjs.org/doc/). Npm comes installed with Node.js since node version 0.8.x therefore you likely already have it.
+The following recommended installation requires [npm](https://npmjs.org/). If you are unfamiliar with npm, see the [npm docs](https://npmjs.org/doc/). Npm comes installed with Node.js since node version 0.8.x, therefore, you likely already have it.
 
 Install smtpapi-nodejs and its dependencies:
 
@@ -57,10 +57,10 @@ npm install smtpapi
 # Quick Start
 
 ```javascript
-var smtpapi   = require('smtpapi');
-var header    = new smtpapi();
-header.addTo('test@example.com');
-header.setUniqueArgs({cow: 'chicken'});
+var smtpapi = require("smtpapi");
+var header = new smtpapi();
+header.addTo("test@example.com");
+header.setUniqueArgs({ cow: "chicken" });
 console.log(header.jsonString());
 ```
 

@@ -1,4 +1,4 @@
-Hello! Thank you for choosing to help contribute to one of the SendGrid open source libraries. There are many ways you can contribute and help is always welcome.  We simply ask that you follow the following contribution policies.
+Hello! Thank you for choosing to help contribute to one of the SendGrid open source libraries. There are many ways you can contribute and help is always welcome. We simply ask that you follow the following contribution policies.
 
 - [Feature Request](#feature-request)
 - [Submit a Bug Report](#submit-a-bug-report)
@@ -29,7 +29,7 @@ A software bug is a demonstrable issue in the code base. In order for us to diag
 Before you decide to create a new issue, please try the following:
 
 1. Check the Github issues tab if the identified issue has already been reported, if so, please add a +1 to the existing post.
-2. Update to the latest version of this code and check if issue has already been fixed
+2. Update to the latest version of this code and check if the issue has already been fixed
 3. Copy and fill in the Bug Report Template we have provided below
 
 ### Please use our Bug Report Template
@@ -41,17 +41,17 @@ In order to make the process easier, we've included a [sample bug report templat
 
 We welcome direct contributions to the smtpapi-nodejs code base. Thank you!
 
-### Development Environment ###
+### Development Environment
 
-#### Install and Run Locally ####
+#### Install and Run Locally
 
-##### Prerequisites #####
+##### Prerequisites
 
 - Node.js version 0.10, 0.12 or 4
 - The SendGrid Service, starting at the [free level](https://sendgrid.com/free?source=smtpapi-nodejs)
 - Please see [package.json](package.json)
 
-##### Initial setup: #####
+##### Initial setup:
 
 ```bash
 git clone https://github.com/sendgrid/smtpapi-nodejs.git
@@ -72,7 +72,7 @@ echo "sendgrid.env" >> .gitignore
 source ./sendgrid.env
 ```
 
-##### Execute: #####
+##### Execute:
 
 See the [examples folder](examples) to get started quickly.
 
@@ -175,7 +175,7 @@ Please run your code through:
    ```
 
 7. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/)
-    with a clear title and description against the `main` branch. All tests must be passing before we will review the PR.
+   with a clear title and description against the `main` branch. All tests must be passing before we will review the PR.
 
 <a name="code-reviews"></a>
 ## Code Reviews
