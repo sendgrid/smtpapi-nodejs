@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2020-09-02] Version 1.4.4
+--------------------------
+**Library - Docs**
+- [PR #84](https://github.com/sendgrid/smtpapi-nodejs/pull/84): Ran .md files through Grammer.ly. Thanks to [@adamk1230](https://github.com/adamk1230)!
+
+
 [2020-08-19] Version 1.4.3
 --------------------------
 **Library - Chore**
