@@ -8,7 +8,7 @@ If you can't find a solution below, please open an [issue](https://github.com/se
 - [Table of Contents](#table-of-contents)
 - [Versions](#versions)
 - [Using the Package Manager](#using-the-package-manager)
-- [Outputting the STMPAPI Header](#outputting-the-stmpapi-header)
+- [Outputting the SMTPAPI Header](#outputting-the-SMTPapi-header)
 
 <a name="versions"></a>
 ## Versions
@@ -38,8 +38,8 @@ If you are using a `package.json` file:
 }
 ```
 
-<a name="stmpapi-header"></a>
-## Outputting the STMPAPI Header
+<a name="SMTPapi-header"></a>
+## Outputting the SMTPAPI Header
 
 You can output the header by the following:
 
