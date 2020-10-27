@@ -11,7 +11,7 @@ const assert = require('assert');
  */
 describe('LICENSE', () => {
   it('should contain the current year as the end year of the license', () => {
-    const license = fs.readFileSync(`${process.cwd()}/LICENSE.md`, 'utf8');
+    const license = fs.readFileSync(`${process.cwd()}/LICENSE`, 'utf8');
     const currentYear= (new Date()).getFullYear();
     return assert(license.indexOf(`${currentYear}`) !== -1);
   });

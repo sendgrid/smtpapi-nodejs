@@ -175,8 +175,8 @@ describe('smtapi-nodejs repo', function() {
     assert(fileExists('ISSUE_TEMPLATE.md'));
   });
 
-  it('should have ./LICENSE.md file', function() {
-    assert(fileExists('LICENSE.md'));
+  it('should have ./LICENSE file', function() {
+    assert(fileExists('LICENSE'));
   });
 
   it('should have ./PULL_REQUEST_TEMPLATE.md file', function() {
