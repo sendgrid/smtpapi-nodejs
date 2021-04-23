@@ -1,21 +1,20 @@
 language: node_js
 node_js:
-  - 4
-  - 5
-  - 6
-  - 7
-  - 8
-  - 10
-  - lts/*
-  - node
+- 4
+- 5
+- 6
+- 7
+- 8
+- 10
+- lts/*
+- node
 deploy:
-  - provider: npm
-    email: team_interfaces@twilio.com
-    api_key: $NPM_TOKEN
-    on:
-      tags: true
-      node: 10
-
+- provider: npm
+  email: team_interfaces@twilio.com
+  api_key: "$NPM_TOKEN"
+  on:
+    tags: true
+    node: 10
 notifications:
   slack:
     if: branch = main
@@ -23,4 +22,4 @@ notifications:
     on_success: never
     on_failure: change
     rooms:
-      - secure: S99/9xKfMMtAv+CD57Vq4HVfu4UO8jECatRYditwmcrP72BOjkW5OdC5cLAe4hl1h7Bhsdj5bdHQU9s4Vqje/q3aMaJQ3gCW1lzpj0YZO5BFZJk3cBR3Cuw4La0mv6IFa76nQhGjYPXepxdqbnMLApj6LuOFkl5edIUyshX+J38=
+      secure: Oq+yhYxaMMOwnlKNGPqEil06ErPvbFDD/JgTvuBxjimMEa+u1kRXiyxujxmOlb44qElbV60WTNm08eT3BjUy6ezE5vJgN2J+BokSPLhQeRtLRv6Jglvd8YjwvlGj+KXQkjqOjNUo3xzB0Nk2WHtpRk1O3zb9rE/htUxQz//QxKU=
