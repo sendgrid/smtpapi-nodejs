@@ -22,4 +22,4 @@ notifications:
     on_success: never
     on_failure: change
     rooms:
-      secure: Oq+yhYxaMMOwnlKNGPqEil06ErPvbFDD/JgTvuBxjimMEa+u1kRXiyxujxmOlb44qElbV60WTNm08eT3BjUy6ezE5vJgN2J+BokSPLhQeRtLRv6Jglvd8YjwvlGj+KXQkjqOjNUo3xzB0Nk2WHtpRk1O3zb9rE/htUxQz//QxKU=
+      secure: US7wGASgCiS3mW7Ok9UeX3/c5z7GDObtjLPnLMdgXxrZiqEi9Mr2wOURQR201WTHdD+lUvhWaWHPbtXs98hQr9ohtO8PsQXwIMAaS3CdmiQpVZXdyQ7Ym42XMUFTJJDjg22k/hAoFTzBkEpNk0at8bf7Wpbix0oj79ePrOEDqXA=
