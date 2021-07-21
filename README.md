@@ -2,7 +2,6 @@
 
 [![BuildStatus](https://travis-ci.com/sendgrid/smtpapi-nodejs.png?branch=main)](https://travis-ci.com/sendgrid/smtpapi-nodejs)
 [![npm](https://img.shields.io/npm/v/smtpapi.svg)](https://www.npmjs.com/package/smtpapi)
-[![Email Notifications Badge](https://dx.sendgrid.com/badge/nodejs)](https://dx.sendgrid.com/newsletter/nodejs)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Twitter Follow](https://img.shields.io/twitter/follow/sendgrid.svg?style=social&label=Follow)](https://twitter.com/sendgrid)
 [![GitHub contributors](https://img.shields.io/github/contributors/sendgrid/smtpapi-nodejs.svg)](https://github.com/sendgrid/smtpapi-nodejs/graphs/contributors)
