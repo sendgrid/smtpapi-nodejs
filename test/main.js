@@ -151,8 +151,8 @@ describe('smtapi-nodejs repo', function() {
     assert(fileExists('.gitignore'));
   });
 
-  it('should have ./.travis.yml file', function() {
-    assert(fileExists('.travis.yml'));
+  it('should have ./.github/workflows/test-and-deploy.yml file', function() {
+    assert(fileExists('.github/workflows/test-and-deploy.yml'));
   });
 
   it('should have ./.codeclimate.yml file', function() {
