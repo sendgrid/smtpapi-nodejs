@@ -1,6 +1,13 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2022-01-12] Version 1.4.5
+--------------------------
+**Library - Chore**
+- [PR #110](https://github.com/sendgrid/smtpapi-nodejs/pull/110): update license year. Thanks to [@JenniferMah](https://github.com/JenniferMah)!
+- [PR #109](https://github.com/sendgrid/smtpapi-nodejs/pull/109): migrate to gh actions. Thanks to [@shwetha-manvinkurke](https://github.com/shwetha-manvinkurke)!
+
+
 [2020-09-02] Version 1.4.4
 --------------------------
 **Library - Docs**
