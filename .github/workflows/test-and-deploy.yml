@@ -47,6 +47,13 @@ jobs:
         with:
           node-version: 10
 
+      - name: Create GitHub Release
+        uses: sendgrid/dx-automator/actions/release@main
+        with:
+          footer: '**[npm](https://www.npmjs.com/package/smtpapi/v/${version})**'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - run: npm install
       - name: Publish to NPM
         run: |
