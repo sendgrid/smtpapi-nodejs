@@ -47,6 +47,7 @@ jobs:
         with:
           node-version: 10
 
+      - run: npm install
       - name: Create GitHub Release
         uses: sendgrid/dx-automator/actions/release@main
         with:
@@ -54,7 +55,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: npm install
       - name: Publish to NPM
         run: |
           npm config set //registry.npmjs.org/:_authToken ${NODE_AUTH_TOKEN}
