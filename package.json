@@ -1,6 +1,6 @@
 {
   "name": "smtpapi",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "Build SendGrid X-SMTPAPI headers in nodejs.",
   "main": "lib/main.js",
   "directories": {
