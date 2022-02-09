@@ -1,6 +1,13 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2022-02-09] Version 1.4.6
+--------------------------
+**Library - Chore**
+- [PR #112](https://github.com/sendgrid/smtpapi-nodejs/pull/112): upgrade supported language versions. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #111](https://github.com/sendgrid/smtpapi-nodejs/pull/111): add gh release to workflow. Thanks to [@shwetha-manvinkurke](https://github.com/shwetha-manvinkurke)!
+
+
 [2022-01-12] Version 1.4.5
 --------------------------
 **Library - Chore**
