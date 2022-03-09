@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2022-03-09] Version 1.4.7
+--------------------------
+**Library - Chore**
+- [PR #113](https://github.com/sendgrid/smtpapi-nodejs/pull/113): push Datadog Release Metric upon deploy success. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+
+
 [2022-02-09] Version 1.4.6
 --------------------------
 **Library - Chore**
