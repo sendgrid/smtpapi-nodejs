@@ -17,6 +17,7 @@ All updates to this module are documented in our [CHANGELOG](CHANGELOG.md).
 - [Library Usage Documentation](USAGE.md)
 - [How to Contribute](#contribute)
 - [About](#about)
+- [Support](#support)
 - [License](#license)
 
 <a name="installation"></a>
@@ -81,9 +82,10 @@ Quick links:
 
 smtpapi-nodejs is maintained and funded by Twilio SendGrid, Inc. The names and logos for smtpapi-nodejs are trademarks of Twilio SendGrid, Inc.
 
-If you need help installing or using the library, please check the [Twilio SendGrid Support Help Center](https://support.sendgrid.com).
+<a name="support"></a>
+# Support
 
-If you've instead found a bug in the library or would like new features added, go ahead and open issues or pull requests against this repo!
+If you need help with SendGrid, please check the [Twilio SendGrid Support Help Center](https://support.sendgrid.com).
 
 <a name="license"></a>
 # License
