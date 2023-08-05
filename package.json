@@ -24,13 +24,11 @@
   "readmeFilename": "README.md",
   "author": "scottmotte",
   "license": "BSD",
-  "dependencies": {
+  "devDependencies": {
     "chai": "^2.3.0",
     "esdoc": "^1.0.3",
     "esdoc-coverage-plugin": "^1.1.0",
-    "esdoc-type-inference-plugin": "^1.0.1"
-  },
-  "devDependencies": {
+    "esdoc-type-inference-plugin": "^1.0.1",
     "mocha": "3.5.3",
     "should": "13.1.2"
   },
