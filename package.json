@@ -3,6 +3,9 @@
   "version": "1.4.7",
   "description": "Build SendGrid X-SMTPAPI headers in nodejs.",
   "main": "lib/main.js",
+  "engines": {
+    "node": ">=22"
+  },
   "directories": {
     "test": "test"
   },
